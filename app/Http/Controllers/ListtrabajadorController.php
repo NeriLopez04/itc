@@ -15,4 +15,8 @@ class ListtrabajadorController extends Controller
         $trabajadores = Listtrabajador::all();
         return view ('rrhh.listtrabajadores',['trabajadores'=>$trabajadores]);
     }
+
+    public function create(){
+        return view ('rrhh.createtrabajadores');
+    }
 }

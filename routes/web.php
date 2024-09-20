@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/rrhh/listtrabajadores', [App\Http\Controllers\ListtrabajadorController::class, 'index']);
 
-Route::get('/rrhh/createtrabajadores', [App\Http\Controllers\CreatetrabajadorController::class, 'createtrabajador']);
+Route::get('rrhh/createtrabajadores',[App\Http\Controllers\ListtrabajadorController::class,'create']);
 
 Route::get('/rrhh/createcontrato', [App\Http\Controllers\CreatecontratoController::class,'createcontrato']);
 

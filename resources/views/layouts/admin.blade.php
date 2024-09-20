@@ -169,8 +169,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{url('/')}}" class="brand-link">
-      <img src="{{url('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">ITC</span>
+      <img src="{{url('dist/img/logo ITC.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">In Time Control</span>
     </a>
 
     <!-- Sidebar -->
@@ -214,7 +214,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <!--<li class="nav-item">
                 <a href="{{url('rrhh/createtrabajadores')}}" class="nav-link">
                 <i class="bi bi-person-plus-fill"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio
+                   Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio
                   <p>Agregar trabajador</p>
                 </a>
               </li> -->
@@ -275,18 +275,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-<!-- Apartado en el nav bar derecho para cerrrar sesion -->
+<!-- Apartado en el nav bar izquierdo para cerrrar sesion -->
           <a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"
-                                        style="background-color:#d33715">
-                                            <i class="nav-icon bi bi-door-open-fill"></i>
-                                        <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                                        <p>Cerrar Sesión</p>
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"
+                style="background-color:#d33715">
+              <i class="nav-icon bi bi-door-open-fill"></i>
+                <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+              <p>Cerrar Sesión</p>
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+          </form>
           </li>
         </ul>
       </nav>
