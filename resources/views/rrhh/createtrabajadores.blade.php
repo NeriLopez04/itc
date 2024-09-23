@@ -36,9 +36,15 @@
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="form-group">
-                            <label for="">Numero de Seguro Social</label>
+                            <label for="">Fecha de Nacimiento</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label for="">Edad</label>
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -50,9 +56,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
-                            <label for="">Genero</label>
+                            <label for="">Numero de Seguro Social</label>
                             <input type="text" class="form-control">
                         </div>
                     </div>
@@ -62,24 +68,57 @@
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="form-group">
                             <label for="">CURP</label>
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <div class="form-group">
-                            <label for="">Telefono</label>
+                            <label for="">Sexo</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="">Estado Civil</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-1">
+                        <div class="form-group">
+                            <label for="">Tipo Sangre</label>
                             <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="">Correo</label>
+                            <label for="">Telefono </label>
                             <input type="text" class="form-control">
                         </div>
                     </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Telefono 2</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="">Correo de Contacto</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <!--<div class="col-md-2">
+                        <div class="form-group">
+                            <label for="">a</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div> -->
                 </div>
                 Dirección <br>
                 <div class="row">
@@ -146,13 +185,17 @@
                             <input type="text" class="form-control">
                         </div>
                     </div>
-                    <tfoot>
-                        <tr>
-                            <a href="{{ url('/rrhh/createtrabajadores') }}" class="btn btn-primary">
-                                <i class="bi bi-person-plus-fill"></i> Agregar Datos Administrativos
-                            </a>
-                        </tr>
-                    </tfoot>
+                          
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <a href="" class="btn btn-secondary"> Cancelar </a>
+                            <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
+                            <a  href="" class="btn btn-primary" style="float: right;">Agregar datos Administrativos</a>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
