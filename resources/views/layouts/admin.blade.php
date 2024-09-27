@@ -26,6 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -248,7 +249,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+        <li class="nav-item">
             <a href="#" class="nav-link active">
                 <i class="bi bi-gear-fill"></i>
               <p>
@@ -258,7 +259,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('system/proyectos')}}" class="nav-link">
+                <a href="{{url('system/createproyecto')}}" class="nav-link">
                 <i class="bi bi-pin-map-fill"></i>
                 <!--<i class="fa-solid fa-industry"></i>-->
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -274,6 +275,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-cash-register"></i>
+              <p>
+                PRM
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('prm/list')}}" class="nav-link">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                <!--<i class="fa-solid fa-industry"></i>-->
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Listado de Ordenes de Compra</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('prm/orden')}}" class="nav-link">
+                <i class="fas fa-credit-card"></i>
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Orden de Compra</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('prm/listsolicitud')}}" class="nav-link">
+                  <i class="fas fa-hand-holding"></i>
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Listado de Cotizaciones</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('prm/listproveedor')}}" class="nav-link">
+                  <i class="fas fa-address-book"></i>
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Listado de proveedores</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
 <!-- Apartado en el nav bar izquierdo para cerrrar sesion -->
           <a class="nav-link" href="{{ route('logout') }}"

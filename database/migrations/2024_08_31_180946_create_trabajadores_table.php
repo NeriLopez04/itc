@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('id_itc', length: 255)->unique();
             $table->string('nombre_trabajador', length:100);
-            $table->string('apellido_paterno', length:100);
-            $table->string('apellido_materno', length:100);
+            //$table->string('apellido_paterno', length:100);
+            //$table->string('apellido_materno', length:100);
             $table->biginteger('numero_seguro')->unique();
             $table->string('rfc', length:13)->unique();
             $table->string('curp', length:18)->unique();

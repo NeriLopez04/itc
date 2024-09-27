@@ -28,6 +28,9 @@
                         <th>Correo</th>
                         <th>Direccion</th>
                         <th>Black List</th>
+                        <th>Credencial</th>
+                        <th>Contrato</th>
+                        <th>Finiquito</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,6 +47,15 @@
                             <td>{{ $trabajadores->correo }}</td>
                             <td>{{ $trabajadores->calle }}</td>
                             <td>{{ $trabajadores->black_list }}</td>
+                            <td>
+                                <a  href="" class="btn btn-primary">Credencial</a>
+                            </td>
+                            <td>
+                                <a  href="createcontrato" class="btn btn-success">Contrato</a>
+                            </td>
+                            <td>
+                                <a  href="createfiniquito" class="btn btn-warning">Finiquito</a>
+                            </td>
                     </tr>
                     @endforeach
                 </tbody>
