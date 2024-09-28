@@ -23,15 +23,23 @@ Auth::routes(['register']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/rrhh/listtrabajadores', [App\Http\Controllers\TrabajadorController::class, 'index']);
+//Route::get('/rrhh/listtrabajadores', [App\Http\Controllers\TrabajadorController::class, 'index']);
 
-Route::get('rrhh/createtrabajadores',[App\Http\Controllers\TrabajadorController::class,'create']);
+//Route::get('rrhh/createtrabajadores',[App\Http\Controllers\TrabajadorController::class,'create']);
 
-Route::get('/rrhh/createcontrato', [App\Http\Controllers\CreatecontratoController::class,'createcontrato']);
+//Route::get('/rrhh/createcontrato', [App\Http\Controllers\CreatecontratoController::class,'createcontrato']);
 
-Route::get('/rrhh/createfiniquito',[App\Http\Controllers\CreatefiniquitoController::class,'createfiniquito']);
+//Route::get('/rrhh/createfiniquito',[App\Http\Controllers\CreatefiniquitoController::class,'createfiniquito']);
 
-Route::get('/rrhh/asistencia', [App\Http\Controllers\AsistenciaController::class,'index']);
+//Route::get('/rrhh/asistencia', [App\Http\Controllers\AsistenciaController::class,'index']);
+
+Route::resource('/rrhh/listtrabajadores',App\Http\Controllers\TrabajadorController::class);
+
+Route::resource('/rrhh/createfiniquito',App\Http\Controllers\FiniquitoController::class);
+
+//Route::resource('rrhh/listtrabajadores',App\Http\Controllers\TrabajadorController::class);
+
+
 
 Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
 
