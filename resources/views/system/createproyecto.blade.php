@@ -2,12 +2,10 @@
 
 @section ('content')
 <div class="section">
-    <h1>NUEVO PROYECTO</h1>
     <div class="section">
-
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">CREAR NUEVO PROYECTO</h3>
+                <h2 class="card-title">CREAR NUEVO PROYECTO</h2>
 
             </div>
             <div class="card-body" style="">
@@ -19,16 +17,29 @@
                             <input type="text" class="form-control"@readonly(true)>
                         </div>
                     </div>
-                    <div class="form-group-md-12" style="float:right">
-                        <a href="listproyectos" class="btn btn-primary"> Agregar Cliente</a> <br>
+                    <div class="col-md-2"  style="float:left;">
+                        <div class="form-group" >
+                            <label for="">ID Proyecto (ITC)</label><b>*</b>
+                            <input type="text" class="form-control"@required(true)>
+                        </div>
                     </div>
+                    <div class="form-group-md-2" style="float:right">
+                       <br> <a href="listproyectos" class="btn btn-primary"> Agregar Cliente</a>
+                    </div>
+                    
                 </div><br><br><br>
 
                 
 
                 <br><h6 class="custom-text">DATOS GENERALES DEL PROYECTO</h6>
-                    <div class="row">
-                        <div class="col-md-2">
+                    <div class="row">   
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Nombre del Proyecto</label><b>*</b>
+                                <input type="text" class="form-control"@required(true)>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nombre del Cliente</label><b>*</b>
                                 <input type="text" class="form-control"@required(true)>
@@ -36,19 +47,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Nombre del Proyecto</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
                                 <label for="">Categoria de Trabajo</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="">Codigo Postal</label><b>*</b>
                                 <input type="text" class="form-control"@required(true)>
                             </div>
                         </div>
@@ -56,19 +55,19 @@
 
                     <br><h6 class="custom-text">DIRECCION</h6>
                     <div class="row">
-                        <div class="col-md-1">
+                        <div class="col-md-2">
                             <div class="form-group">
                                 <label for="">CP</label><b>*</b>
                                 <input type="number" class="form-control"@required(true)>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Pais</label>
                                 <input type="text" class="form-control">
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Estado</label>
                                 <input type="text" class="form-control">
@@ -82,13 +81,10 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Colonia</label>
+                                <label for="">Colonia</label><b>*</b>
                                 <input type="text" class="form-control">
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Calle</label><b>*</b>
@@ -103,37 +99,32 @@
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="">Numero Inerior</label><b>
+                                <label for="">Numero Inerior</label>
                                 <input type="number" class="form-control"@required(false)>
                             </div>
                         </div>
                     </div>
+                    
                     <br><h6 class="custom-text">DATOS EN GENERAL</h6>
                     <div class="row">
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="">ID Proyecto (ITC)</label>
-                                <input type="number" class="form-control"@required(true)>
-                            </div>
-                        </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Registro Patronal</label>
+                                <label for="">Registro Patronal</label><b>*</b>
                                 <input type="text" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for=""> Inicio de Contrato </label>
+                                <label for=""> Inicio de Contrato </label><b>*</b>
                                 <input type="date" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for=""> Fin de Contrato </label>
+                                <label for=""> Fin de Contrato </label><b>*</b>
                                 <input type="date" class="form-control"@required(true)>
                             </div>
                         </div>
@@ -147,17 +138,22 @@
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for=""> Moneda del Contrato </label>
-                                <input type="number" class="form-control"@required(true)>
+                                <label for=""> Moneda del Contrato </label><b>*</b>
+                                <input type="text" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for=""> Comentarios </label>
-                                <input type="number" class="form-control"@required(true)>
+                                <input type="text" class="form-control"@required(true)>
                             </div>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <br><a href="/listproyectos" class="btn btn-secondary"> Cancelar </a>
+                        <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
+                        
                     </div>
             </div>
         </div>

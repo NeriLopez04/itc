@@ -10,7 +10,7 @@
                 <a href="/rrhh/listtrabajadores/create" class="btn btn-primary">
                     <i class="bi bi-person-plus-fill"></i> Nuevo Trabajador
                 </a>
-                </button>
+                
             </div>
             </div>
             

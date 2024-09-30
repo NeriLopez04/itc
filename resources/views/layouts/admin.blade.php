@@ -259,7 +259,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('system/createproyecto')}}" class="nav-link">
+                <a href="{{url('system/proyectos')}}" class="nav-link">
                 <i class="bi bi-pin-map-fill"></i>
                 <!--<i class="fa-solid fa-industry"></i>-->
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -308,10 +308,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('prm/listproveedor')}}" class="nav-link">
+                <a href="{{url('prm/clientesprov')}}" class="nav-link">
                   <i class="fas fa-address-book"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Listado de proveedores</p>
+                  <p>Listado de Clientes y Proveedores</p>
                 </a>
               </li>
             </ul>

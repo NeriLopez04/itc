@@ -45,4 +45,11 @@ class TrabajadorController extends Controller
         //Para retornar los datos a la vista:
         return view('rrhh.createtrabajadores', compact ('tipoGenero','estadoCivil','tipoSangre','tipoParentesco'));
     }
+
+    public function store(Request $request){
+        $trabajador = request()->all();
+        return response()->json($trabajador);
+        
+    }
+
 }

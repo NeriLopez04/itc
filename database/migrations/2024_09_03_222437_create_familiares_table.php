@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('familiares', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre',length:100);
-            $table->string('apellido_pat',length:100);
-            $table->string('apellido_mat',length:100);
+            $table->string('nombre',length:255);
+            //$table->string('apellido_pat',length:100);
+            //$table->string('apellido_mat',length:100);
             $table->biginteger('telefono');
             $table->enum('parentesco',['Madre', 'Padre', 'Esposo(a)','Hermano(a)','Hijo(a)','Abuelo(a)','Amigo(a)','Concubino(a)','Cuñado(a)','Primo(a)','Sobrino(a)','Tío(a)']);
             $table->timestamps();

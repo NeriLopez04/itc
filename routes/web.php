@@ -39,9 +39,16 @@ Route::resource('/rrhh/createfiniquito',App\Http\Controllers\FiniquitoController
 
 //Route::resource('rrhh/listtrabajadores',App\Http\Controllers\TrabajadorController::class);
 
+Route::resource('rrhh/contrato',App\Http\Controllers\ContratoController::class);
 
 
-Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
+
+Route::resource('/system/proyectos', App\Http\Controllers\ProyectoController::class);
+
+
+Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);
+
+//Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
 
 Route::get('/system/usuarios',[App\Http\Controllers\GestionusuarioController::class,'gestionusuarios']);
 
@@ -53,9 +60,9 @@ Route::get('/prm/listsolicitud',[App\Http\Controllers\PrmsolicitudController::cl
 
 Route::get('/prm/createsolicitud',[App\Http\Controllers\PrmsolicitudController::class, 'create']);
 
-Route::get('/prm/listproveedor',[App\Http\Controllers\PrmproveedorController::class, 'index']);
+//Route::get('/prm/listproveedor',[App\Http\Controllers\PrmproveedorController::class, 'index']);
 
-Route::get('/prm/createproveedor',[App\Http\Controllers\PrmproveedorController::class,'create']);
+//Route::get('/prm/createproveedor',[App\Http\Controllers\PrmproveedorController::class,'create']);
 
 
 
