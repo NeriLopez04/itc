@@ -9,5 +9,5 @@ class Listtrabajador extends Model
 {
     use HasFactory;
 
-    protected $table='trabajadores';
+    protected $table='trabajadores';    
 }

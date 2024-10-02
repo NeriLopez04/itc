@@ -43,14 +43,20 @@ Route::resource('rrhh/contrato',App\Http\Controllers\ContratoController::class);
 
 
 
-Route::resource('/system/proyectos', App\Http\Controllers\ProyectoController::class);
+Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::class);
 
 
-Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);
+
+
+Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
+
+
+///
+//Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);
 
 //Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
 
-Route::get('/system/usuarios',[App\Http\Controllers\GestionusuarioController::class,'gestionusuarios']);
+//Route::get('/system/usuarios',[App\Http\Controllers\GestionusuarioController::class,'gestionusuarios']);
 
 Route::get('/prm/list', [App\Http\Controllers\PrmlistController::class,'index']);
 

@@ -2,7 +2,7 @@
 
 @section ('content')
 <div class="section" style="margin-left: 10px">
-    <h1>Agregar nuevo trabajador</h1>
+    
     <div class="section">
         <!-- Tabla 01 -->
         <div class="card">
@@ -25,21 +25,10 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Nombre Completo</label><b>*</b>
-                                        <input type="text" name="" class="form-control"@required(true)>
+                                        <input type="text" name="nombre_trabajador" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                                <!--<div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Apellido Paterno</label><b>*</b>
-                                        <input type="text" class="form-control"@required(true)>
-                                    </div>
-                                </div> -->
-                                <!--<div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Apellido Materno</label><b>*</b>
-                                        <input type="text" class="form-control"@required(true)>
-                                    </div>
-                                </div>-->
+                    
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="birthdate">Fecha de Nacimiento</label><b>*</b>
@@ -49,7 +38,7 @@
                                 <div class="col-md-1">
                                     <div class="form-group">
                                         <label for="age">Edad</label>
-                                        <input type="text" id="age" name="age" class="form-control"@readonly(true)>
+                                        <input type="text" id="age" name="edad" class="form-control"@readonly(true)>
                                     </div>
                                 </div>
 
@@ -162,12 +151,7 @@
                                         <input type="email" name="correo" class="form-control"@required(false)>
                                     </div>
                                 </div>
-                                <!--<div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">a</label>
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div> -->
+                                
                             </div>
                             Dirección <br>
                             <div class="row">
@@ -242,18 +226,7 @@
                                         <input type="text" name="nombre" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                            <!--<div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Apellido Paterno</label><b>*</b>
-                                        <input type="text" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Apellido Materno</label><b>*</b>
-                                        <input type="text" class="form-control"@required(true)>
-                                    </div>
-                                </div> -->
+                            
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="">Telefono</label><b>*</b>
@@ -265,7 +238,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <br><a href="listtrabajadores" class="btn btn-secondary"> Cancelar </a>
+                                        <br><a href="/rrhh/listtrabajadores" class="btn btn-secondary"> Cancelar </a>
                                         <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
                                         <a  href="" class="btn btn-primary" style="float: right;">Agregar datos Administrativos</a>
                                         

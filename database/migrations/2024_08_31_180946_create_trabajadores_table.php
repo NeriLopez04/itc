@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('rfc', length:13)->unique();
             $table->string('curp', length:18)->unique();
             $table->biginteger('telefono');
-            $table->bigInteger('telefono2');
+            $table->bigInteger('telefono2')->nullable(true);
             $table->string('correo')->unique();
             $table->string('calle', length:255);
             $table->string('numero_ext', length:8);
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('pais', length:100);
             $table->boolean('black_list');
             $table->text('foto');
-            $table->date('fecha_naci');
+            $table->date('fecha_naci')->nullable(true);
            // $table->boolean('estatus');
             $table->timestamps();
         });

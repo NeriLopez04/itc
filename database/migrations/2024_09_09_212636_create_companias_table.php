@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('companias', function (Blueprint $table) {
             $table->id();
             $table->string('id_compania',length:100)->unique();
-            $table->enum('tipo',['Cliente','Proveedor']);
+            $table->enum('compania',['Cliente','Proveedor']);
             $table->string('nombre');
             $table->string('calle');
-            $table->biginteger('numero');
+            $table->biginteger('numero_ext');
+            $table->biginteger('numero_int');
             $table->string('colonia');
             $table->integer('cp');
             $table->string('estado');

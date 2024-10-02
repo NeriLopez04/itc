@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12" style="float: right;">
                 <div class="form-group">
-                    <br><a href="proveedores" class="btn btn-primary"  style="float: right;"> Agregar Nuevo Proveedor </a>
+                    <br><a href="/prm/compania/create" class="btn btn-primary"  style="float: right;"> Agregar Nuevo Proveedor </a>
                     
                 </div>
             </div>

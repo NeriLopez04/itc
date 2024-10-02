@@ -308,7 +308,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('prm/clientesprov')}}" class="nav-link">
+                <a href="{{url('prm/compania')}}" class="nav-link">
                   <i class="fas fa-address-book"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Listado de Clientes y Proveedores</p>
