@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_proy', length:255);
             $table->string('id_itc',length:100)->unique();
+            $table->string('reg_patronal',length:100);
             $table->string('calle',length:255);
             $table->string('colonia', length:255);
             $table->integer('numero_int');

@@ -14,13 +14,13 @@
                     <div class="col-md-2"  style="float:left;">
                         <div class="form-group" >
                             <label for="">ID Proyecto</label><b>*</b><br>
-                            <input type="text" class="form-control"@readonly(true)>
+                            <input type="text" name="id" class="form-control"@readonly(true)>
                         </div>
                     </div>
                     <div class="col-md-2"  style="float:left;">
                         <div class="form-group" >
                             <label for="">ID Proyecto (ITC)</label><b>*</b>
-                            <input type="text" class="form-control"@required(true)>
+                            <input type="text" name="id_itc" class="form-control"@required(true)>
                         </div>
                     </div>
                     <div class="form-group-md-2" style="float:right">
@@ -36,19 +36,19 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nombre del Proyecto</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="nombre_proy" class="form-control"@required(true)>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nombre del Cliente</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="" class="form-control"@required(true)>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Categoria de Trabajo</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="categoria" class="form-control"@required(true)>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="">CP</label><b>*</b>
-                                <input type="number" class="form-control"@required(true)>
+                                <input type="number" name="cp" class="form-control"@required(true)>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -70,37 +70,37 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Estado</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="estado" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Ciudad</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="ciudad" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Colonia</label><b>*</b>
-                                <input type="text" class="form-control">
+                                <input type="text" name="colonia" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Calle</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="calle" class="form-control"@required(true)>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="">Numero Exterior</label><b>*</b>
-                                <input type="number" class="form-control"@required(true)>
+                                <input type="number" name="numero_ext" class="form-control"@required(true)>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for="">Numero Inerior</label>
-                                <input type="number" class="form-control"@required(false)>
+                                <input type="number" name="numero_int" class="form-control"@required(false)>
                             </div>
                         </div>
                     </div>
@@ -111,42 +111,42 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Registro Patronal</label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="reg_patronal" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for=""> Inicio de Contrato </label><b>*</b>
-                                <input type="date" class="form-control"@required(true)>
+                                <input type="date" class="fecha_inicio"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for=""> Fin de Contrato </label><b>*</b>
-                                <input type="date" class="form-control"@required(true)>
+                                <input type="date" class="fecha_fin"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for=""> Monto del Contrato </label>
-                                <input type="number" class="form-control"@required(true)>
+                                <input type="number" name="monto_contrato" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for=""> Moneda del Contrato </label><b>*</b>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="moneda" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for=""> Comentarios </label>
-                                <input type="text" class="form-control"@required(true)>
+                                <input type="text" name="comentarios" class="form-control"@required(true)>
                             </div>
                         </div>
                     </div>

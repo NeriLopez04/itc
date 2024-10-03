@@ -34,6 +34,7 @@ return new class extends Migration
             $table->boolean('black_list');
             $table->text('foto');
             $table->date('fecha_naci')->nullable(true);
+            $table->integer('edad')->nullable(true);
            // $table->boolean('estatus');
             $table->timestamps();
         });
