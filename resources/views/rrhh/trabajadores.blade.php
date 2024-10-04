@@ -7,7 +7,7 @@
             <div class="card-header">
             <h3 class="card-title">Listado de Trabajadores</h3>
             <div class="card-tools">
-                <a href="/rrhh/listtrabajadores/create" class="btn btn-primary">
+                <a href="/rrhh/trabajadores/create" class="btn btn-primary">
                     <i class="bi bi-person-plus-fill"></i> Nuevo Trabajador
                 </a>
                 

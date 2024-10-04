@@ -1,0 +1,403 @@
+SEQ	Categoria	Categoria en Ingles
+INSERT INTO cargos (id_seq,cargo,cargo_ing)
+VALUES
+('A.00.01','Gerente General', 'General Manager'),
+('A.01.01','Director de Proyecto', 'Project Director'),
+('A.01.02','Control de proyecto', 'Project controller'),
+('A.01.03','Planeador de proyecto', 'Project scheduler'),
+('A.02.01','Gerente de ingenieria', 'Engineering manager'),
+('A.03.01','Gerente de Administración', 'Administration Manager'),
+('A.03.02','Auxiliar de Admin', 'Administrator Assistant'),
+('A.03.03','Contador', 'Accountant'),
+('A.03.04','Abogado', 'Lawyer'),
+('A.03.05','Recepcionista', 'Receptionist'),
+('A.03.06','Secretaria', 'Secretary'),
+('A.04.01','Gerente de Seguridad y Ambiental', 'Safety & Environmental Manager'),
+('A.05.01','Gerente de Calidad', 'Quality Manage'),
+('A.06.01','Gerente de Procura y Logistica', 'Procurement & Logistic Manager'),
+('A.07.01','Gerente de mantenimiento', 'Maintenance Manager'),
+('B.10.01','Gerente de Sitio', 'Site Manager'),
+('B.10.02','Coordinador de proyecto', 'Project Coordinator'),
+('B.11.01','Control de Proyecto ', 'Field Project Control'),
+('B.11.02','Auxiliar de Proyecto', 'Project Control Assistant'),
+('B.12.01','Ingenieria de Campo', 'Field Engineer'),
+('B.13.01','Administrador', 'Administrator'),
+('B.13.02','Auxiliar de Administrador', 'Admin Assistant'),
+('B.14.01','Supervisor de Seguridad', 'Safety Supervisor'),
+('B.14.02','Seguridad', 'Safety'),
+('B.14.03','Auxiliar de Seguridad', 'Safety Assistant'),
+('B.14.04','Ambiental', 'Environmental'),
+('B.14.05','Paramedico', 'Paramedic'),
+('B.14.06','Vigilancia', 'Guard'),
+('B.14.07','Limpieza', 'Janitor'),
+('B.15.01','Supervisor de Calidad', 'Quality supervisor'),
+('B.15.02','Calidad', 'Quality',),
+('B.15.03','Auxiliar de Calidad', 'Quality assistant'),
+('B.15.04','Inspector de Soldadura', 'Welding Inspector'),
+('B.15.05','Control de documento', 'Document controller'),
+('B.16.01','Control de Material',    'Material Controller'),
+('B.16.02','Auxiliar de Material', 'Material Assistant'),
+('B.17.01','Almacenista de Herramienta', 'Tool Keeper'),
+('B.20.01','Ingeniero Civil', 'Civil Engineer'),
+('B.20.02','Arquitecto', 'Architect'),
+('B.21.01','Supervisor de Civil', 'Civil Supervisor'),
+('B.40.01','Ingeniero Mecanico', 'Mechanical Engineer'),
+('B.41.01','Supervisor Mecanico', 'Mechanical Supervisor'),
+('B.50.01','Ingeniero de Tuberia', 'Piping Eingieer'),
+('B.51.01','Supervisor de Tuberia', 'Piping Supervisor'),
+('B.60.01','Ingeniero Eléctrico', 'Electric Engineer'),
+('B.61.01','Supervisor Eléctrico', 'Electric Supervisor'),
+('B.70.01','Ingeniero Instrumentista', 'Instrument Engineer'),
+('B.71.01','Supervisor Instrumentista', 'Instrument Superviso'),
+('B.81.01','Supervisor de Pintura', 'Painting Supervisor'),
+('C.22.01','Cabo Civil', 'Civil Foreman',),
+('C.22.02','Topógrafo', 'Tophographic Surveyer'),
+('C.22.03','Carpintero', 'Carpenter'),
+('C.22.04','Albañil', 'Mason'),
+('C.22.05','Fierrero', 'Rebar Worker'),
+('C.22.06','Plomero', 'Plumber'),
+('C.42.01','Cabo Mecanico', 'Mechanical Foreman'),
+('C.42.02','Mecanico Especialista', 'Mechanical Specialist'),
+('C.42.03','Mecanico de Primera', 'Mechanical Technician'),
+('C.42.04','Pailero	Structural', 'Metal Worker'),
+('C.42.05','Soldador Especialista', 'Special Welder'),
+('C.42.06','Soldador Estructural', 'Structural Welder'),
+('C.52.01','Cabo de Tuberia', 'Piping Foreman'),
+('C.52.02','Tubero', 'Pipe Fitter'),
+('C.52.03','Soldador Argonero', 'Argon Welder'),
+('C.52.04','Soldador Punteador de Tubo', 'Tack Welder for Pipe'),
+('C.52.05','Pruebero de Tuberia', 'Piping Tester'),
+('C.62.01','Cabo Eléctrico', 'Electric Foreman'),
+('C.62.02','Eléctrico Especialista', 'Electric Specialist'),
+('C.62.03','Eléctrico de Primera', 'Electric Technician'),
+('C.62.04','Eléctrico montador', 'Electric Fitter'),
+('C.72.01','Cabo Instrumentista', 'Instrument Foreman'),
+('C.72.02','Instrumentista Especial', 'Instrument Specialist'),
+('C.72.03','Tecnico Instrumentista', 'Instrument Technician'),
+('C.72.04','Instrumentista Montador', 'Instrument Fitter'),
+('C.82.01','Pintor', 'Painter'),
+('C.82.02','Sand Blastero', 'Sand Blastor'),
+('C.83.01','Cabo de Aislamiento', 'Insulation Foreman'),
+('C.83.02','Aislador', 'Insulator'),
+('C.92.01','Operador de Grua (>80),', 'Crane Operator (>80 T),'),
+('C.93.01','Operador de Grua (<80),', 'Crane Operator (<80 T),'),
+('C.94.01','Maniobrista', 'Ringer'),
+('C.95.01','Andamiero', 'Scaffolding Builder'),
+('C.96.01','Ayudante General', 'General Helper');
+
+INSERT INTO categorias (categoria) 
+VALUES 
+('Dirección'), ('Administración'), ('Proyecto'), 
+('Procura y Logística'), ('Seguridad y Ambiental'), 
+('Calidad'), ('Mantenimiento'), ('Comun');
+
+
+'Gerente General',
+'Director de Proyecto',
+'Control de proyecto',
+'Planeador de proyecto',
+'Gerente de ingenieria',
+'Gerente de Administración',
+'Auxiliar de Admin',
+'Contador',
+'Abogado',
+'Recepcionista',
+'Secretaria',
+'Gerente de Seguridad y Ambiental',
+'Gerente de Calidad',
+'Gerente de Procura y Logistica',
+'Gerente de mantenimiento',
+'Gerente de Sitio',
+'Coordinador de proyecto',
+'Control de Proyecto',
+'Auxiliar de Proyecto',
+'Ingenieria de Campo',
+'Administrador',
+'Auxiliar de Administrador',
+'Supervisor de Seguridad',
+'Seguridad',
+'Auxiliar de Seguridad',
+'Ambiental',
+'Paramedico',
+'Vigilancia',
+'Limpieza',
+'Supervisor de Calidad',
+'Calidad	Quality',
+'Auxiliar de Calidad',
+'Inspector de Soldadura',
+'Control de documento',
+'Control de Material',
+'Auxiliar de Material',
+'Almacenista de Herramienta',
+'Ingeniero Civil',
+'Arquitecto',
+'Supervisor de Civil',
+'Ingeniero Mecanico',
+'Supervisor Mecanico',
+'Ingeniero de Tuberia',
+'Supervisor de Tuberia',
+'Ingeniero Eléctrico',
+'Supervisor Eléctrico',
+'Ingeniero Instrumentista',
+'Supervisor Instrumentista',
+'Supervisor de Pintura',
+'Cabo Civil',
+'Topógrafo',
+'Carpintero',
+'Albañil',
+'Fierrero',
+'Plomero',
+'Cabo Mecanico',
+'Mecanico Especialista',
+'Mecanico de Primera',
+'Pailero	Structural',
+'Soldador Especialista',
+'Soldador Estructural',
+'Cabo de Tuberia',
+'Tubero',
+'Soldador Argonero',
+'Soldador Punteador de Tubo',
+'Pruebero de Tuberia',
+'Cabo Eléctrico',
+'Eléctrico Especialista',
+'Eléctrico de Primera',
+'Eléctrico montador',
+'Cabo Instrumentista',
+'Instrumentista Especial',
+'Tecnico Instrumentista',
+'Instrumentista Montador',
+'Pintor',
+'Sand Blastero',
+'Cabo de Aislamiento',
+'Aislador',
+'Operador de Grua (>80),',
+'Operador de Grua (<80),',
+'Maniobrista',
+'Andamiero',
+'Ayudante General',
+
+
+
+
+
+
+
+
+
+
+
+'General Manager',
+'Project Director',
+'Project controller',
+'Project scheduler',
+'Engineering manager',
+'Administration Manager',
+'Administrator Assistant',
+'Accountant',
+'Lawyer',
+'Receptionist',
+'Secretary'
+'Safety & Environmental Manager',
+'Quality Manage',
+'Procurement & Logistic Manager',
+'Maintenance Manager',
+'Site Manager',
+'Project Coordinator',
+'Field Project Control',
+'Project Control Assistant',
+'Field Engineer',
+'Administrator',
+'Admin Assistant',
+'Safety Supervisor',
+'Safety',
+'Safety Assistant',
+
+'Environmental',
+'Paramedic',
+'Guard',
+'Janitor',
+'Quality supervisor',
+
+'Quality assistant',
+'Welding Inspector',
+
+'Document controller',
+'Material Assistant',
+'Tool Keeper',
+'Civil Engineer',
+'Architect',
+'Civil Supervisor',
+
+'Mechanical Engineer',
+'Mechanical Supervisor',
+'Piping Eingieer',
+'Piping Supervisor',
+'Electric Engineer',
+'Electric Supervisor',
+'Instrument Engineer',
+'Instrument Superviso',
+'Painting Supervisor',
+'Civil Foreman',
+
+'Tophographic Surveyer',
+'Carpenter',
+'Mason',
+'Rebar Worker',
+'Plumber',
+'Mechanical Foreman',
+
+'Mechanical Specialist',
+'Mechanical Technician',
+'Metal Worker',
+'Special Welder',
+'Structural Welder',
+'Piping Foreman',
+'Pipe Fitter',
+'Argon Welder',
+
+'Tack Welder for Pipe',
+'Piping Tester',
+
+'Electric Foreman',
+'Electric Specialist',
+'Electric Technician',
+'Electric Fitter',
+
+'Instrument Foreman',
+'Instrument Specialist',
+'Instrument Technician',
+'Instrument Fitter',
+'Painter',
+
+'Sand Blastor',
+'Insulation Foreman',
+'Insulator',
+'Crane Operator (>80 T),',
+'Crane Operator (<80 T),',
+
+'Rigger',
+'Scaffolding Builder',
+'General Helper',
+'Material controlle',
+
+
+SEQ	Categoria	Categoria en Ingles
+A.00.01	Gerente General	General Manager
+A.01.01	Director de Proyecto	Project Director
+A.01.02	Control de proyecto	Project controller
+A.01.03	Planeador de proyecto	Project scheduler
+A.02.01	Gerente de ingenieria	Engineering manager
+A.03.01	Gerente de Administración	Administration Manager
+A.03.02	Auxiliar de Admin	Administrator Assistant
+A.03.03	Contador	Accountant
+A.03.04	Abogado	Lawyer
+A.03.05	Recepcionista	Receptionist
+A.03.06	Secretaria	Secretary
+A.04.01	Gerente de Seguridad y Ambiental	Safety & Environmental Manager
+A.05.01	Gerente de Calidad	Quality Manager
+A.06.01	Gerente de Procura y Logistica	Procurement & Logistic Manager
+A.07.01	Gerente de mantenimiento	Maintenance Manager
+B.10.01	Gerente de Sitio	Site Manager
+B.10.02	Coordinador de proyecto	Project Coordinator
+B.11.01	Control de Proyecto	Field Project Control
+B.11.02	Auxiliar de Proyecto	Project Control Assistant
+B.12.01	Ingenieria de Campo	Field Engineer
+B.13.01	Administrador	Administrator
+B.13.02	Auxiliar de Administrador	Admin Assistant
+B.14.01	Supervisor de Seguridad	Safety Supervisor
+B.14.02	Seguridad	Safety
+B.14.03	Auxiliar de Seguridad	Safety Assistant
+B.14.04	Ambiental	Environmental
+B.14.05	Paramedico	Paramedic
+B.14.06	Vigilancia	Guard
+B.14.07	Limpieza	Janitor
+B.15.01	Supervisor de Calidad	Quality supervisor
+B.15.02	Calidad	Quality
+B.15.03	Auxiliar de Calidad	Quality assistant
+B.15.04	Inspector de Soldadura	Welding Inspector
+B.15.05	Control de documento	Document controller
+B.16.01	Control de Material	Material controller
+B.16.02	Auxiliar de Material	Material Assistant
+B.17.01	Almacenista de Herramienta	Tool Keeper
+B.20.01	Ingeniero Civil	Civil Engineer
+B.20.02	Arquitecto	Architect
+B.21.01	Supervisor de Civil	Civil Supervisor
+B.40.01	Ingeniero Mecanico	Mechanical Engineer
+B.41.01	Supervisor Mecanico	Mechanical Supervisor
+B.50.01	Ingeniero de Tuberia	Piping Eingieer
+B.51.01	Supervisor de Tuberia	Piping Supervisor
+B.60.01	Ingeniero Eléctrico	Electric Engineer
+B.61.01	Supervisor Eléctrico	Electric Supervisor
+B.70.01	Ingeniero Instrumentista	Instrument Engineer
+B.71.01	Supervisor Instrumentista	Instrument Supervisor
+B.81.01	Supervisor de Pintura	Painting Supervisor
+C.22.01	Cabo Civil	Civil Foreman
+C.22.02	Topógrafo	Tophographic Surveyer
+C.22.03	Carpintero	Carpenter
+C.22.04	Albañil	Mason
+C.22.05	Fierrero	Rebar Worker
+C.22.06	Plomero	Plumber
+C.42.01	Cabo Mecanico	Mechanical Foreman
+C.42.02	Mecanico Especialista	Mechanical Specialist
+C.42.03	Mecanico de Primera	Mechanical Technician
+C.42.04	Pailero	Structural Metal Worker
+C.42.05	Soldador Especialista	Special Welder
+C.42.06	Soldador Estructural	Structural Welder
+C.52.01	Cabo de Tuberia	Piping Foreman
+C.52.02	Tubero	Pipe Fitter
+C.52.03	Soldador Argonero	Argon Welder
+C.52.04	Soldador Punteador de Tubo	Tack Welder for Pipe
+C.52.05	Pruebero de Tuberia	Piping Tester
+C.62.01	Cabo Eléctrico	Electric Foreman
+C.62.02	Eléctrico Especialista	Electric Specialist
+C.62.03	Eléctrico de Primera	Electric Technician
+C.62.04	Eléctrico montador	Electric Fitter
+C.72.01	Cabo Instrumentista	Instrument Foreman
+C.72.02	Instrumentista Especial	Instrument Specialist
+C.72.03	Tecnico Instrumentista	Instrument Technician
+C.72.04	Instrumentista Montador	Instrument Fitter
+C.82.01	Pintor	Painter
+C.82.02	Pintor	Painter
+C.82.03	Sand Blastero	Sand Blastor
+C.83.01	Cabo de Aislamiento	Insulation Foreman
+C.83.02	Aislador	Insulator
+C.92.01	Operador de Grua (>80),	Crane Operator (>80 T),
+C.93.01	Operador de Grua (<80),	Crane Operator (<80 T),
+C.94.01	Maniobrista	Rigger
+C.95.01	Andamiero	Scaffolding Builder
+C.96.01	Ayudante General	General Helper
+
+
+
+
+
+
+
+Schema::create('cargo' ,function (Blueprint $table), {
+            $table->id(),
+            $table->string('id_seq'),->unique(true),
+            $table->string('cargo'),->unique(true),
+            $table->string('cargo_ing'),
+            $table->timestamps(),
+        }),
+
+
+
+
+public function up(),: void
+    {
+        Schema::create('categoria' ,function (Blueprint $table), {
+            $table->id(),
+            $table->string('categoria'),->unique(true), //Esta categoria solo debe de tener las siguientes categorias ,segun el file structure:
+            $table->timestamps(),                                                   //Direccion
+        }),                                                                         //Admin
+    }                                                                               //Proy
+                                                                                    //Procura
+    /**                                                                             //Seguridad
+     * Reverse the migrations.                                                      //Calidad
+     */                                                                             //Mantenimiento
+    public function down(),: void                                                    //Comun
+    {
+        Schema::dropIfExists('categoria'),
+    }
+}

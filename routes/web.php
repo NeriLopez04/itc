@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CargoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -52,6 +53,12 @@ Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 
 
 ///
+
+//Este es una ruta para incertar datos desde el controlador
+
+Route::get('/insert-cargos', [CargoController::class, 'store']);
+
+
 //Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);
 
 //Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
