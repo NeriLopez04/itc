@@ -220,10 +220,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li> -->
               <li class="nav-item">
-                <a href="{{url('rrhh/listtrabajadores')}}" class="nav-link">
+                <a href="{{url('rrhh/trabajadores')}}" class="nav-link">
                 <i class="bi bi-person-lines-fill"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Lista de trabajadores</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('rrhh/trabajadores/create')}}" class="nav-link">
+                  <i class="bi bi-person-fill-add"></i>
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Agregar Nuevo Trabajador</p>
                 </a>
               </li>
               <li class="nav-item">

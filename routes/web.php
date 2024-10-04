@@ -33,7 +33,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Route::get('/rrhh/asistencia', [App\Http\Controllers\AsistenciaController::class,'index']);
 
-Route::resource('/rrhh/listtrabajadores',App\Http\Controllers\TrabajadorController::class);
+Route::resource('/rrhh/trabajadores',App\Http\Controllers\TrabajadorController::class);
 
 Route::resource('/rrhh/createfiniquito',App\Http\Controllers\FiniquitoController::class);
 

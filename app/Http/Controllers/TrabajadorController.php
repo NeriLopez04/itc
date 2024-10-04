@@ -14,7 +14,7 @@ class TrabajadorController extends Controller
 {
     public function index() {
         $trabajadores = Listtrabajador::all();
-        return view ('rrhh.listtrabajadores',['trabajadores'=>$trabajadores]);
+        return view ('rrhh.trabajadores',['trabajadores'=>$trabajadores]);
     }
 
     //public function create(){
