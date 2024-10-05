@@ -47,8 +47,8 @@ class TrabajadorController extends Controller
     }
 
     public function store(Request $request){
-        $trabajador = request()->all();
-        return response()->json($trabajador);
+        $trabajadores = request()->all();
+        return response()->json($trabajadores);
         
     }
 

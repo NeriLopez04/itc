@@ -401,3 +401,6 @@ public function up(),: void
         Schema::dropIfExists('categoria'),
     }
 }
+
+
+Tere Xochihua Perez Gonzales    124817473731       TXPG070886J  TXPG070886JTSPPF34     81475902842  teresa@intimecontrol.com    Apodaca Los huertos Juan Alberto Cantor Medrano 81673930476

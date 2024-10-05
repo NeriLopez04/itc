@@ -11,5 +11,5 @@ class CargoController extends Controller
 {
     //En estecontrolador se madara a llamar a la vistas de Cargo (Cargo que posee cada trabajador Andamiero, Electricista, etc)
     
-
+    
 }

@@ -24,15 +24,6 @@ Auth::routes(['register']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get('/rrhh/listtrabajadores', [App\Http\Controllers\TrabajadorController::class, 'index']);
-
-//Route::get('rrhh/createtrabajadores',[App\Http\Controllers\TrabajadorController::class,'create']);
-
-//Route::get('/rrhh/createcontrato', [App\Http\Controllers\CreatecontratoController::class,'createcontrato']);
-
-//Route::get('/rrhh/createfiniquito',[App\Http\Controllers\CreatefiniquitoController::class,'createfiniquito']);
-
-//Route::get('/rrhh/asistencia', [App\Http\Controllers\AsistenciaController::class,'index']);
 
 Route::resource('/rrhh/trabajadores',App\Http\Controllers\TrabajadorController::class);
 
@@ -48,15 +39,32 @@ Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::cla
 
 
 
-
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ///
 
 //Este es una ruta para incertar datos desde el controlador
 
-Route::get('/insert-cargos', [CargoController::class, 'store']);
+//Route::get('/insert-cargos', [CargoController::class, 'store']);
 
 
 //Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);

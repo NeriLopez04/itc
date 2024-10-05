@@ -9,17 +9,17 @@
             <div class="card-header">
                 <h3 class="card-title">Información General del Trabajador</h3>
                     <div class="card-tools">
-                        <!--<a href="{{ url('/rrhh/createtrabajad') }}" class="btn btn-primary">
+                        <!--<a href="{{ url('/rrhh/trabajadores') }}" class="btn btn-primary">
                             <i class="bi bi-person-plus-fill"></i> Nuevo Trabajador
                         </a>-->
                         </button>
                     </div>
             </div>
             <div class="card-body" style="">
-                <form action="{{ ('/rrhh') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/trabajadores') }}" method="post" enctype="multipart/form-data">
+                @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            @csrf
                             Datos Personales <br>
                             <div class="row">
                                 <div class="col-md-4">
