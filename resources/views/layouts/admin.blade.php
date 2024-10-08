@@ -152,11 +152,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
+      <!--  Para agregar, ver, modificar o eliminar Monedas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="bi bi-currency-exchange"></i>
+          <span class="badge badge-warning navbar-badge"></span>
+        </a>
+      </li>
+      <!-- Pantalla Completa -->
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
+      <!--  Barra desplegable del otro lado   -->
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
@@ -319,6 +328,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <i class="fas fa-address-book"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Listado de Clientes y Proveedores</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('prm/moneda')}}" class="nav-link">
+                  <i class="bi bi-currency-exchange"></i>
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>Monedas</p>
                 </a>
               </li>
             </ul>

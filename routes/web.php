@@ -42,7 +42,7 @@ Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::cla
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 
 
-
+Route::resource('prm/moneda', App\Http\Controllers\MonedaController::class);
 
 
 

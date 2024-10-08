@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Listtrabajador;
+use App\Models\Trabajador;
 use Illuminate\Http\Reuest;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class TrabajadorController extends Controller
 
 {
     public function index() {
-        $trabajadores = Listtrabajador::all();
+        $trabajadores = Trabajador::all();
         return view ('rrhh.trabajadores',['trabajadores'=>$trabajadores]);
     }
 
@@ -47,8 +47,9 @@ class TrabajadorController extends Controller
     }
 
     public function store(Request $request){
-        $trabajadores = request()->all();
-        return response()->json($trabajadores);
+        //$trabajadores = request()->all();
+        //return response()->json($trabajadores);
+
         
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('monedas', function (Blueprint $table) {
             $table->id();
             $table->string('moneda');
-            $table->integer('conversion');
+            $table->decimal('conversion',8,2);
             $table->timestamps();
         });
     }

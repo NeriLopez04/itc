@@ -117,15 +117,15 @@
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for=""> Inicio de Contrato </label><b>*</b>
-                                <input type="date" class="fecha_inicio"@required(true)>
+                                <label for="birthdate">Fecha de Nacimiento</label><b>*</b>
+                                <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control"@required(true)>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="form-group">
                                 <label for=""> Fin de Contrato </label><b>*</b>
-                                <input type="date" class="fecha_fin"@required(true)>
+                                <input type="date" name="fecha_fin" class="form-control"@required(true)>
                             </div>
                         </div>
 
@@ -146,8 +146,8 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for=""> Comentarios </label>
-                                <input type="text" name="comentarios" class="form-control"@required(true)>
-                            </div>
+                                <textarea name="comentarios" id="comentarios" class="form-control" cols="50" rows="3"@required(true)></textarea>
+                            </div>  
                         </div>
                     </div>
                     <div class="form-group">
