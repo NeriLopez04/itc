@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Listtrabajador;
+use App\Models\Trabajador;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -14,7 +14,7 @@ class TrabajadorSeeder extends Seeder
      */
     public function run(): void
     {
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Neri Esau López Lopez',
             'numero_seguro'=>'93784903874',
@@ -35,7 +35,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Mario Daniel Ramos Lino',
             'numero_seguro'=>'93784903842',
@@ -56,7 +56,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Damaris Melina Lopez Lopez',
             'numero_seguro'=>'93784903872',
@@ -77,7 +77,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Omar Edair Rodriguez Resendez',
             'numero_seguro'=>'9378230274',
@@ -98,7 +98,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Pedro Ruiz Medrano',
             'numero_seguro'=>'93787462374',
@@ -119,7 +119,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Miguel Angel Villa Melendez',
             'numero_seguro'=>'93784916212',
@@ -140,7 +140,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Ximena Hernandez Lopez',
             'numero_seguro'=>'98276543874',
@@ -161,7 +161,7 @@ class TrabajadorSeeder extends Seeder
             'created_at'=>'09-12-2024',
             'updated_at'=>'09-12-2024'
         ]);
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Nancy Michelle Cano Martinez',
             'numero_seguro'=>'93787398761',
@@ -183,7 +183,7 @@ class TrabajadorSeeder extends Seeder
             'updated_at'=>'09-12-2024'
         ]);
 
-        Listtrabajador::create([
+        Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Victor Manuel Pérez Gonzales',
             'numero_seguro'=>'93787329737',
@@ -206,7 +206,7 @@ class TrabajadorSeeder extends Seeder
         ]);
     
 
-    Listtrabajador::create([
+    Trabajador::create([
         'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
         'nombre_trabajador'=>'Jose Alfredo Díaz Vazquez',
         'numero_seguro'=>'93787392726',
@@ -228,7 +228,7 @@ class TrabajadorSeeder extends Seeder
         'updated_at'=>'09-12-2024'
     ]);
 
-    Listtrabajador::create([
+    Trabajador::create([
         'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
         'nombre_trabajador'=>'Sergio Ruben Mota Vallejo',
         'numero_seguro'=>'73828976478',

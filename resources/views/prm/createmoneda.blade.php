@@ -9,7 +9,13 @@
 
             </div>
             <div class="card-body" style="">
-                <form action="{{ ('/') }}" method="POST" enctype="multipart/form-data">
+                @if(session('success'))
+            <div style="color: green;">
+                {{ session('success') }}
+            </div>
+            @endif
+                <form action="{{ route('moneda.store') }}" method="POST" enctype="multipart/form-data">
+                
                 @csrf
                 <div class="row">
                     <div class="col-md-4">
@@ -21,7 +27,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Tipo de Conversion en Peso Mexicano</label><b>*</b>
-                            <input type="numeric" name="conversion" step="0.01" class="form-control"@required(true)>
+                            <input class="form-control" type="number" name="conversion" step="0.01" @required(true)>
                         </div>
                     </div>
                 </div>
@@ -30,7 +36,9 @@
                     <button type="submit" class="btn btn-primary">Guardar Moneda</button>
                 </div>
             </div><br>
+           
         </div>
+
 
         <style>
             .custom-text {
