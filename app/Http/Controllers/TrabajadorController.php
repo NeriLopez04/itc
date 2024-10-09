@@ -49,8 +49,33 @@ class TrabajadorController extends Controller
     public function store(Request $request){
         //$trabajadores = request()->all();
         //return response()->json($trabajadores);
-
+        $request->validate([
+            'nombre_trabajador'=> 'required',
+            'fecha_naci'=> 'required',
+            'numero_seguro' => 'required',
+            'rfc' => 'required',
+            'curp' => 'required',
+            'telefono' => 'required',
+            'correo' => 'required',
+            'cp' => 'required',
+            'calle' => 'required',
+            'numero_ext' => 'required',
+        ]);
         
+        $trabajador = new Trabajador();
+
+        $trabajador->nombre_trabajador = $request->nombre_trabajador;
+        $trabajador->fecha_naci = $request->fecha_naci;
+        $trabajador->numero_seguro = $request->numero_seguro;
+        $trabajador->rfc = $request->rfc;
+        $trabajador->curp = $request->curp;
+        $trabajador->telefono = $request->telefono;
+        $trabajador->correo = $request->correo;
+        $trabajador->cp = $request->cp;
+        $trabajador->calle = $request->calle;
+        $trabajador->numero_ext = $request->numero_ext;
+
+        $trabajador->save();
     }
 
 }
