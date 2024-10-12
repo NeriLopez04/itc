@@ -55,7 +55,7 @@
                                 <a  href="" class="btn btn-primary">Credencial</a>
                             </td>
                             <td>
-                                <a  href="/rrhh/createcontrato" class="btn btn-success">Contrato</a>
+                                <a  href="/rrhh/contrato/create" class="btn btn-success">Contrato</a>
                             </td>
                             <td>
                                 <a  href="createfiniquito" class="btn btn-warning">Finiquito</a>

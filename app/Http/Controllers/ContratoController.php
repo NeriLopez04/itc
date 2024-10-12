@@ -7,7 +7,11 @@ class ContratoController extends Controller
 //Controlador que redirige a la vista del modulo de Creacion de Contrato
 
 {
-    public function createcontrato(){
+    public function index(){
         return view ('rrhh.contrato');
+    }
+
+    public function create(){
+        return view ('rrhh.createcontrato');
     }
 }
