@@ -13,14 +13,20 @@ return new class extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
-            $table->string('id_contrato');
+            $table->string('id_contrato'); //Id Compuesto con el ID del trabajador y numero de contrato que lleva
             $table->string('apoderado');
             $table->string('testigo');
             $table->string('testigo2');
             $table->date('fecha_contrato');
             $table->integer('dias_contrato');
             $table->date('fin_contrato');
-            $table->integer('sueldo');
+
+            $table->string('trabajador_id');
+            $table->foreign('trabajador_id')->references('id_itc')->on('trabajadores')->onDelete('cascade')->onUpdate('cascade'); //Llave forane de trabajadores
+
+            $table->string('proyecto_id');
+            $table->foreign('proyecto_id')->referencoes('id_itc')->on('proyectos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de Proyectos //Llave foranea de Proyectos
+            
             $table->timestamps();
         });
     }

@@ -15,6 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('reg_patronal')->unique();
             $table->string('nombre_patronal');
+
+            $table->string('proyecto_id');
+            $table->foreign('proyecto_id')->references('id_itc')->on('proyectos')->onDelete('set nnull')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('subproyecto_id')->nullable();
+            $table->foreign('subproyect_id')->references('id')->on('subproyects')->onDelete('set null')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }
