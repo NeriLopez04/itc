@@ -37,9 +37,9 @@ class TrabajadorController extends Controller
 
     public function create(){
         //Obtiene valores ENUM de varios campos
-        $tipoGenero = $this->getEnumValues('genero', 'genero'); // Por ejemplo, campo status de la tabla users
-        $estadoCivil = $this->getEnumValues('estado_civil', 'estado_civil'); // Trae los valores tipo ENUM de la tabla estado_civil
-        $tipoSangre = $this->getEnumValues('sangre', 'sangre'); //Trae los valores tipo ENUM del campo sangre, de la tabla sangre
+        $tipoGenero = $this->getEnumValues('generos', 'genero'); // Por ejemplo, campo status de la tabla users
+        $estadoCivil = $this->getEnumValues('estadociviles', 'estados_civiles'); // Trae los valores tipo ENUM de la tabla estado_civil
+        $tipoSangre = $this->getEnumValues('sangres', 'sangre'); //Trae los valores tipo ENUM del campo sangre, de la tabla sangre
         $tipoParentesco = $this->getEnumValues('familiares','parentesco'); //Trae los valores tipo ENUM del campo parentesco de la tabla de familiares
 
         //Para retornar los datos a la vista:

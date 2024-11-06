@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Estadocivil;
+use App\Models\Genero;
+use App\Models\Sangre;
 use App\Models\Trabajador;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -14,6 +17,30 @@ class TrabajadorSeeder extends Seeder
      */
     public function run(): void
     {
+        //Esto para obtener los ID's de los Estados Civiles creados segun el valor del campo ENUM
+        $soltero = Estadocivil::where('estados_civiles', 'Soltero(a)')->first()->id;
+        $casado = Estadocivil::where('estados_civiles', 'Casado(a)')->first()->id;
+        $divorciado = Estadocivil::where('estados_civiles', 'Divorciado(a)')->first()->id;
+        $viudo = Estadocivil::where('estados_civiles', 'Viudo(a)')->first()->id;
+        $separado = Estadocivil::where('estados_civiles', 'Separado(a)')->first()->id;
+        $unionLibre = Estadocivil::where('estados_civiles', 'Union Libre')->first()->id;
+
+        //Para obtener los IDs de los tiposde Generos creados
+        $masculino = Genero::where('genero', 'Masculino')->first()->id;
+        $famenino = Genero::where('genero', 'Femino')->first()->id;
+
+        //Para obtener los ID's de los tipos de Sangre segun el valor del campo ENUM
+
+        $ap = Sangre::where('sangre', 'A+');
+        $an = Sangre::where('sangre',);
+        $bp = Sangre::where('sangre',);
+        $   = Sangre::where('sangre',);
+        $   = Sangre::where('sangre',);
+        $   = Sangre::where('sangre',);
+        $   = Sangre::where('sangre',);
+        $   = Sangre::where('sangre',);
+        
+
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Neri Esau López Lopez',

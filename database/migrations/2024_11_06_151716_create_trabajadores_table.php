@@ -66,6 +66,7 @@ return new class extends Migration
 
             //CUANDO LA RELACION ES DE 1 A MUCHOS O LO CONTRARIO, LA LLAVE FORANEA SIEMPRE VA EN LA TABLA QUE TIENE LA RELACION DE MUCHOS (LA QUE TIENE
             //MUCHOS REGISTROS)
+            $table->timestamps();
         });
     }
 
