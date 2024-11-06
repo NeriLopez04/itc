@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('genero', function (Blueprint $table) {
+        Schema::create('regobras', function (Blueprint $table) {
             $table->id();
-            $table->enum('genero',['Masculino', 'Femenino']);
+            $table->string('reg_obra')->unique();
+            $table->string('nombre_obra');
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('genero');
+        Schema::dropIfExists('regobras');
     }
 };

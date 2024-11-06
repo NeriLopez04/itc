@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('departamentos', function (Blueprint $table) {
+        Schema::create('subproyectos', function (Blueprint $table) {
             $table->id();
-            $table->string('departamento')->unique();
+            $table->string('name_subproyect');
+
+            $table->string('proyecto_id')->nullable();
+            $table->foreign('proyecto_id')->references('id_itc')->on('proyectos')->onDelete('set null')->onUpdate('cascade');//Llave foranea de Proyectos
+
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('departamentos');
+        Schema::dropIfExists('subproyectos');
     }
 };

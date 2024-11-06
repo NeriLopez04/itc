@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('estado_civil', function (Blueprint $table) {
+        Schema::create('cargos', function (Blueprint $table) {
             $table->id();
-            $table->enum('estado_civil',['Soltero(a)', 'Casado(a)', 'Divorciado(a)','Viudo(a)','Separado(a)','Union Libre']);
+            $table->string('id_seq')->unique(true);
+            $table->string('cargo')->unique(true);
+            $table->string('cargo_ing');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estado_civil');
+        Schema::dropIfExists('cargos');
     }
 };

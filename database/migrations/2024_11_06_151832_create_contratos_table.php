@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
-            $table->string('id_contrato'); //Id Compuesto con el ID del trabajador y numero de contrato que lleva
+            $table->string('id_contrato')->unique(); //Id Compuesto con el ID del trabajador y numero de contrato que lleva
             $table->string('apoderado');
             $table->string('testigo');
             $table->string('testigo2');
@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('trabajador_id')->references('id_itc')->on('trabajadores')->onDelete('cascade')->onUpdate('cascade'); //Llave forane de trabajadores
 
             $table->string('proyecto_id');
-            $table->foreign('proyecto_id')->referencoes('id_itc')->on('proyectos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de Proyectos //Llave foranea de Proyectos
+            $table->foreign('proyecto_id')->references('id_itc')->on('proyectos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de Proyectos
             
             $table->timestamps();
         });

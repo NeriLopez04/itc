@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('estadociviles', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria')->unique(true); //Esta categoria solo debe de tener las siguientes categorias, segun el file structure:
+            $table->enum('estados_civiles',['Soltero(a)', 'Casado(a)', 'Divorciado(a)','Viudo(a)','Separado(a)','Union Libre']);
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categorias');
+        Schema::dropIfExists('estadociviles');
     }
 };

@@ -29,12 +29,10 @@ return new class extends Migration
             $table->date('fecha_fin');
             $table->bigInteger('monto_contrato');
             $table->text('comentarios');
-
             $table->unsignedBigInteger('horario_id');
-            $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('restrict')->onUpdate('cascade'); //Llave foranea de la tabla de horarios
-
+            $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de horarios
             $table->unsignedBigInteger('moneda_id');
-            $table->foreign('moneda_id')->references('id')->on('monedas')->onDelete('restrict')->onUpdate('cascade');//restrict por si hay mas registros vinvulados, no se borren
+            $table->foreign('moneda_id')->references('id')->on('monedas')->onDelete('cascade')->onUpdate('cascade');//restrict por si hay mas registros vinvulados, no se borren
                                                                                                 //todos. Si el programa detecta que hay registros ligados, 
                                                                                                 //no deja eliminar? Validar.
 
@@ -43,6 +41,7 @@ return new class extends Migration
 
             $table->string('compania_id')->nullable();
             $table->foreign('compania_id')->references('id_compania')->on('companias')->onDelete('set null')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

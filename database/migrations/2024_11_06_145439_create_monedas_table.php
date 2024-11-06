@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reg_obras', function (Blueprint $table) {
+        Schema::create('monedas', function (Blueprint $table) {
             $table->id();
-            $table->string('reg_obra')->unique();
-            $table->string('nombre_obra');
+            $table->string('coin');
+            $table->decimal('conversion',10,2)->change();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reg_obras');
+        Schema::dropIfExists('monedas');
     }
 };

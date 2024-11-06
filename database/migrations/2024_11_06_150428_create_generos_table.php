@@ -6,23 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    
-    
-
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        //Esta Tabla pertenece al tipo de cargo que tiene cada trabajador y estan derivados de la tabla puesto
-        Schema::create('cargos', function (Blueprint $table) {
+        Schema::create('generos', function (Blueprint $table) {
             $table->id();
-            $table->string('id_seq')->unique(true);
-            $table->string('cargo')->unique(true);
-            $table->string('cargo_ing');
+            $table->enum('genero',['Masculino', 'Femenino']);
             $table->timestamps();
         });
-
     }
 
     /**
@@ -30,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('generos');
     }
 };

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('trabajadores', function (Blueprint $table) {
             $table->id();
-            $$table->string('id_itc', length: 255)->unique();
+            $table->string('id_itc', length: 255)->unique();
             $table->string('nombre_trabajador', length:100);
             //$table->string('apellido_paterno', length:100);
             //$table->string('apellido_materno', length:100);
@@ -35,13 +35,13 @@ return new class extends Migration
             $table->text('foto');
             $table->date('fecha_naci')->nullable(true);
             $table->integer('edad')->nullable(true);
-            $table->boolean('status');
+            //$table->boolean('status');
 
             //$table->unsignedBigInteger('familiares_id');    //
             //$table->foreign('familiares_id')->references('id')->on('familiares')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de familiares
 
             $table->unsignedBigInteger('estadocivil_id');
-            $table->foreign('estadocivil_id')->references('id')->on('estadosciviles')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de Estado Civil
+            $table->foreign('estadocivil_id')->references('id')->on('estadociviles')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de Estado Civil
 
             $table->unsignedBigInteger('genero_id');
             $table->foreign('genero_id')->references('id')->on('generos')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de Generos
@@ -66,7 +66,6 @@ return new class extends Migration
 
             //CUANDO LA RELACION ES DE 1 A MUCHOS O LO CONTRARIO, LA LLAVE FORANEA SIEMPRE VA EN LA TABLA QUE TIENE LA RELACION DE MUCHOS (LA QUE TIENE
             //MUCHOS REGISTROS)
-            $table->timestamps();
         });
     }
 

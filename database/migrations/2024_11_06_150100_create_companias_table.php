@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('companias', function (Blueprint $table) {
             $table->id();
+
             $table->string('id_compania',length:100)->unique();
             $table->enum('compania',['Cliente','Proveedor']);
             $table->string('nombre');
@@ -33,6 +34,7 @@ return new class extends Migration
             $table->string('contacto_itc');
             $table->string('producto_giro');
             $table->text('observaciones');
+
             $table->timestamps();
         });
     }

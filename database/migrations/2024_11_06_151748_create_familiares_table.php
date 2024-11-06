@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('nombre');
             $table->bigInteger('telefono');
             $table->enum('parentesco',['Madre', 'Padre','Esposo(a)', 'Hermano(a)', 'Hijo(a)', 'Abuelo(a)', 'Amigo(a)','Concubino(a)','Cuñado(a)','Primo(a)','Sobrino(a)','Tío(a)']);
+            $table->timestamps();
+
             $table->string('trabajador_id'); //No sigue el id convencional
             $table->foreign('trabajador_id')->references('id_itc')->on('trabajadores')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de Trabajadores
-            $table->timestamps();
         });
     }
 
