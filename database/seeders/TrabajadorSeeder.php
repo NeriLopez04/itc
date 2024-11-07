@@ -2,8 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categoria;
+use App\Models\Credito;
+use App\Models\Departamento;
 use App\Models\Estadocivil;
 use App\Models\Genero;
+use App\Models\Horario;
+use App\Models\Proyecto;
 use App\Models\Sangre;
 use App\Models\Trabajador;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -27,19 +32,40 @@ class TrabajadorSeeder extends Seeder
 
         //Para obtener los IDs de los tiposde Generos creados
         $masculino = Genero::where('genero', 'Masculino')->first()->id;
-        $famenino = Genero::where('genero', 'Femino')->first()->id;
+        $femenino = Genero::where('genero', 'Femenino')->first()->id;
 
         //Para obtener los ID's de los tipos de Sangre segun el valor del campo ENUM
+        $ap = Sangre::where('sangre', 'A+')->first()->id;
+        $an = Sangre::where('sangre','A-')->first()->id;
+        $bp = Sangre::where('sangre','B+')->first()->id;
+        $bn = Sangre::where('sangre','B-')->first()->id;
+        $abp = Sangre::where('sangre','AB+')->first()->id;
+        $abn = Sangre::where('sangre','AB-')->first()->id;
+        $op = Sangre::where('sangre','O+')->first()->id;
+        $on = Sangre::where('sangre','O-')->first()->id;
 
-        $ap = Sangre::where('sangre', 'A+');
-        $an = Sangre::where('sangre',);
-        $bp = Sangre::where('sangre',);
-        $   = Sangre::where('sangre',);
-        $   = Sangre::where('sangre',);
-        $   = Sangre::where('sangre',);
-        $   = Sangre::where('sangre',);
-        $   = Sangre::where('sangre',);
-        
+        //Para obtener los ID's de los tiposde Departamento segun el valor en la tabla
+        $direccion = Departamento::where('departament','Direccion')->first()->id;
+        $admin = Departamento::where('departament','Administracion')->first()->id;
+        $calidad = Departamento::where('departament','Calidad')->first()->id;
+        $seguridad = Departamento::where('departament','Seguridad')->first()->id;
+        $compras = Departamento::where('departament','Procura y Logistica')->first()->id;
+        $mmto = Departamento::where('departament','Mantenimiento')->first()->id;
+
+        //Para obtener los ID's de los tipos de Categoriasegun el valor en la tabla
+        $auxiliar = Categoria::where ('category', 'auxiliar')->first()->id;
+
+        //Para obtener los ID's de si tiene o no Credito segun el valor de la tabla
+        $si = Credito::where ('credito', '1');
+        $no = Credito::where('credito','0');
+
+        //Para obtener los ID's de los Proyectos 
+        $valladolid = Proyecto::where('nombre_proy', 'CCC Valladolid');
+        $central = Proyecto::where('nombre_proy', 'Oficina Central');
+
+        //Para obtener los ID's de los horarios
+        $horasObligadas = Horario::where('horas_obligadas', '8');
+
 
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -60,8 +86,19 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $soltero,
+            'genero_id' => $masculino,
+            'sangre_id' => $op,
+            'departamento_id' => $direccion,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
+
         ]);
+
+        
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Mario Daniel Ramos Lino',
@@ -81,7 +118,16 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $soltero,
+            'genero_id' => $masculino,
+            'sangre_id' => $op,
+            'departamento_id' => $calidad,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
+
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -102,7 +148,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $separado,
+            'genero_id' => $femenino,
+            'sangre_id' => $on,
+            'departamento_id' => $mmto,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -123,7 +177,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $soltero,
+            'genero_id' => $masculino,
+            'sangre_id' => $ap,
+            'departamento_id' => $calidad,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -144,7 +206,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $divorciado,
+            'genero_id' => $masculino,
+            'sangre_id' => $bn,
+            'departamento_id' => $compras,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -165,7 +235,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $soltero,
+            'genero_id' => $masculino,
+            'sangre_id' => $an,
+            'departamento_id' => $mmto,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -186,7 +264,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $soltero,
+            'genero_id' => $masculino,
+            'sangre_id' => $op,
+            'departamento_id' => $mmto,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
@@ -207,7 +293,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $viudo,
+            'genero_id' => $femenino,
+            'sangre_id' => $abn,
+            'departamento_id' => $seguridad,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
 
         Trabajador::create([
@@ -229,7 +323,15 @@ class TrabajadorSeeder extends Seeder
             'black_list'=>'0',
             'foto'=>'',
             'created_at'=>'09-12-2024',
-            'updated_at'=>'09-12-2024'
+            'updated_at'=>'09-12-2024',
+            'estadocivil_id' => $casado,
+            'genero_id' => $masculino,
+            'sangre_id' => $bp,
+            'departamento_id' => $admin,
+            'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
         ]);
     
 
@@ -252,7 +354,15 @@ class TrabajadorSeeder extends Seeder
         'black_list'=>'0',
         'foto'=>'',
         'created_at'=>'09-12-2024',
-        'updated_at'=>'09-12-2024'
+        'updated_at'=>'09-12-2024',
+        'estadocivil_id' => $unionLibre,
+        'genero_id' => $masculino,
+        'sangre_id' => $abn,
+        'departamento_id' => $compras,
+        'categoria_id' => $auxiliar,
+            'credito_id' => $si,
+            'proyecto_id' => $central,
+            'horario_id' => $horasObligadas
     ]);
 
     Trabajador::create([
@@ -274,7 +384,16 @@ class TrabajadorSeeder extends Seeder
         'black_list'=>'0',
         'foto'=>'',
         'created_at'=>'09-12-2024',
-        'updated_at'=>'09-12-2024'
+        'updated_at'=>'09-12-2024',
+        'estadocivil_id' => $unionLibre,
+        'genero_id' => $masculino,
+        'sangre_id' => $abp,
+        'departamento_id' => $mmto,
+        'categoria_id' => $auxiliar,
+        'credito_id' => $si,
+        'proyecto_id' => $central,
+        'horario_id' => $horasObligadas
+
     ]);
 
     }

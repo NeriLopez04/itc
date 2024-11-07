@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('creditos', function (Blueprint $table) {
             $table->id();
             $table->boolean('credito');
-            $table->integer('cantidad');
+            $table->integer('cantidad')->nullable();
             $table->timestamps();
         });
     }
