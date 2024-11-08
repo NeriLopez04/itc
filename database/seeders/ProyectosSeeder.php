@@ -17,6 +17,9 @@ class ProyectosSeeder extends Seeder
         Proyecto::create(['nombre_proy' => 'CCC Valladolid']);
         Proyecto::create(['nombre_proy' => 'Oficina Central']);
 
-
+        Proyecto::create([
+        'id_itc' => str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
+        
+        ]);
     }
 }

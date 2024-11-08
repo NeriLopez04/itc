@@ -34,7 +34,7 @@
                     <tr>
                         @foreach($monedas as $monedas)
                             <td><?php echo $contador = $contador +1;?></td>
-                            <td>{{ $monedas->moneda }}</td>
+                            <td>{{ $monedas->coin }}</td>
                             <td>${{ number_format($monedas->conversion,2,'.',',') }}</td>
                             <td>
                                 <button class="btn btn-primary btn-edit" data-id="{{ $monedas->id }}" data-toggle="modal" data-target="#editModal">Editar</button>
@@ -82,12 +82,12 @@
                                 <form id="editForm">
                                     @csrf
                                     @method('PUT')
-                                    <input type="hidden" id="id" name="product_id">
+                                    <input type="hidden" id="moneda_id" name="moneda_id">
 
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label for="">Moneda</label><b>*</b>
-                                            <input type="text" name="moneda" class="form-control"@required(true)>
+                                            <input type="text" name="coin" class="form-control"@required(true)>
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -118,7 +118,7 @@
                             // Hacer la solicitud AJAX para obtener los datos del producto
                             $.get(url, function(data) {
                                 $('#moneda_id').val(data.id);
-                                $('#moneda').val(data.moneda);
+                                $('#coin').val(data.coin);
                                 $('#conversion').val(data.conversion);
                             });
                         });
@@ -136,6 +136,7 @@
                                     location.reload(); // Recargar la página para ver los cambios
                                 },
                                 error: function(response) {
+                                    console.error(error.responseText);
                                     // Manejar errores aquí
                                     console.log(response);
                                 }

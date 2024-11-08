@@ -21,7 +21,7 @@ class MonedaController extends Controller
     {
         //Validacion de Datos
         $data = $request->validate([
-            'moneda' => 'required|string|max:50',
+            'coin' => 'required|string|max:50',
             'conversion' => 'required|numeric|min:0',
         ]);
         //Creacion de la Moneda
@@ -31,30 +31,39 @@ class MonedaController extends Controller
         return redirect()->route('moneda.index')->with('success', 'Moneda creada con exito.');
     }
 
+    public function show(Moneda $monedas)
+    {
+        return view ('moneda.show', compact('moneda'));
+
+    }
+
+    public function edit($id){
+        $moneda = Moneda::findOrFail($id); //Busca la Moneda por ID
+        return response()->json($moneda);
+        //return response()->json($monedas); //Devielve la moneda como Json
+    }
+
+    public function update(Request $request, $id){
+
+        $request->validate([
+            'coin' => 'required|string|max:50',
+            'conversion' => 'required|numeric|min:0',
+        ]);
+
+        $monedas = Moneda::findOrFail($id); //Busca la moneda por id
+        $monedas->coin = $request->input('coin'); //Asigna el valor a coin
+        $monedas->conversion = $request->input('conversion'); //Asigna el valor de 'conversion'
+        $monedas->save(); //Guarda cambios
+
+        return redirect()->route('moneda.index')->with('success','Moneda Actualizada con exito.');
+    }
+
     public function destroy($id){
         $monedas = Moneda::findOrFail($id);
         $monedas->delete();
 
 
-        return redirect()->route('moneda.index')->with('success','Moneda Eliminada Con Exito.w');
+        return redirect()->route('moneda.index')->with('success','Moneda Eliminada Con Exito.');
     }
 
-    public function edit($id){
-        $monedas = Moneda::findOrFall($id); //Busca la Moneda por ID
-        return response()->json($monedas); //Devielve la moneda como Json
-    }
-    
-    public function update(Request $request, $id){
-        $request->validate([
-            'moneda' => 'required|string|max:50',
-            'conversion' => 'required|numeric|min:0',
-        ]);
-
-        $monedas=Moneda::findOrFail($id);
-        $monedas->moneda=$request->imput('moneda');
-        $monedas->conversion=$request->input('conversion');
-        $monedas->save();
-
-        return redirect()->route('moneda.index')->with('success','Moneda Actualizada con exito.');
-    }
 }

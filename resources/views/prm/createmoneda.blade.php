@@ -21,13 +21,13 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Moneda</label><b>*</b>
-                            <input type="text" name="moneda" class="form-control"@required(true)>
+                            <input type="text" id="coin" name="coin" class="form-control"@required(true)>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Tipo de Conversion en Peso Mexicano</label><b>*</b>
-                            <input class="form-control" type="number" name="conversion" step="0.01" @required(true)>
+                            <input class="form-control" type="number" id="conversion" name="conversion" step="0.01" @required(true)>
                         </div>
                     </div>
                 </div>
