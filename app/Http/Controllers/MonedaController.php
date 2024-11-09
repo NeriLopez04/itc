@@ -62,7 +62,6 @@ class MonedaController extends Controller
         $monedas = Moneda::findOrFail($id);
         $monedas->delete();
 
-
         return redirect()->route('moneda.index')->with('success','Moneda Eliminada Con Exito.');
     }
 
