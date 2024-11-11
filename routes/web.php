@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CargoController;
+use App\Http\Controllers\MonedaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -42,7 +43,9 @@ Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::cla
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 
 
-Route::resource('prm/moneda', App\Http\Controllers\MonedaController::class);
+//Route::resource('prm/moneda', App\Http\Controllers\MonedaController::class);
+
+Route::resource('moneda', App\Http\Controllers\MonedaController::class);
 
 
 

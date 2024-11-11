@@ -7,7 +7,7 @@
         <div class="card-header">
             <h3 class="card-title">Listado de Monedas</h3>
             <div class="card-tools">
-                <a href="/prm/moneda/create" class="btn btn-primary">
+                <a href="/moneda/create" class="btn btn-primary">
                     <i class="bi bi-person-plus-fill"></i> Nueva Moneda
                 </a>
             </div>
@@ -32,15 +32,15 @@
                 <tbody>
                     <?php $contador =0; ?>
                     <tr>
-                        @foreach($monedas as $monedas)
+                        @foreach($monedas as $moneda)
                             <td><?php echo $contador = $contador +1;?></td>
-                            <td>{{ $monedas->coin }}</td>
-                            <td>${{ number_format($monedas->conversion,2,'.',',') }}</td>
+                            <td>{{ $moneda->coin }}</td>
+                            <td>${{ number_format($moneda->conversion,2,'.',',') }}</td>
                             <td>
-                                <button class="btn btn-primary btn-edit" data-id="{{ $monedas->id }}" data-toggle="modal" data-target="#editModal">Editar</button>
+                                <button class="btn btn-primary btn-edit" data-id="{{ $moneda->id }}" data-toggle="modal" data-target="#editModal">Editar</button>
                             </td>
                             <td>
-                                <form action="{{ route ('moneda.destroy', $monedas->id) }}" method="POST">
+                                <form action="{{ route ('moneda.destroy', $moneda->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Estas seguro de eliminar la Moneda')">Eliminar</button>
@@ -125,7 +125,7 @@
 
                         $('#updateButton').on('click', function() {
                             const id = $('#moneda_id').val();
-                            const url = `{{ url('/prm/moneda') }}/${id}`;
+                            const url = `{{ url('moneda/index') }}/${id}`;
 
                             // Hacer la solicitud AJAX para actualizar el producto
                             $.ajax({

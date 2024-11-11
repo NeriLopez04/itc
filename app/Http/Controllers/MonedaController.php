@@ -10,11 +10,11 @@ class MonedaController extends Controller
     //Controlador para los modulos de Moneda en el que se Crearan, Editaran, Actualizaran y Eliminarán campos.
     public function index(){
         $monedas = Moneda::all();  //Obtiene todas las monedas
-        return view('prm.moneda',['monedas'=>$monedas]);
+        return view('moneda.index',['monedas'=>$monedas]);
     }
 
     public function create(){
-        return view('prm.createmoneda');
+        return view('moneda.create');
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class MonedaController extends Controller
 
     public function show(Moneda $monedas)
     {
-        return view ('moneda.show', compact('moneda'));
+        return view ('moneda.show', compact('monedas'));
 
     }
 
@@ -50,10 +50,10 @@ class MonedaController extends Controller
             'conversion' => 'required|numeric|min:0',
         ]);
 
-        $monedas = Moneda::findOrFail($id); //Busca la moneda por id
-        $monedas->coin = $request->input('coin'); //Asigna el valor a coin
-        $monedas->conversion = $request->input('conversion'); //Asigna el valor de 'conversion'
-        $monedas->save(); //Guarda cambios
+        $moneda = Moneda::findOrFail($id); //Busca la moneda por id
+        $moneda->coin = $request->input('coin'); //Asigna el valor a coin
+        $moneda->conversion = $request->input('conversion'); //Asigna el valor de 'conversion'
+        $moneda->save(); //Guarda cambios
 
         return redirect()->route('moneda.index')->with('success','Moneda Actualizada con exito.');
     }

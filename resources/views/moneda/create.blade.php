@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <br><a href="/prm/moneda" class="btn btn-secondary"> Cancelar </a>
+                    <br><a href="moneda" class="btn btn-secondary"> Cancelar </a>
                     <button type="submit" class="btn btn-primary">Guardar Moneda</button>
                 </div>
             </div><br>

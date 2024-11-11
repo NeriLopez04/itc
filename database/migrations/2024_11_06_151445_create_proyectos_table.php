@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('id_itc', length:100)->unique();
             $table->string('nombre_proy', length:255);
             $table->string('reg_patronal', length:100);             
-            $table->string('categoria_laboral', length:255);                 
+            $table->string('categoria_laboral', length:255);
             $table->integer('cp');
             $table->string('pais');
             $table->string('estado');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->integer('numero_int');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->bigInteger('monto_contrato');
+            $table->decimal('monto_contrato',10,2);
             $table->text('comentarios');
             $table->unsignedBigInteger('horario_id');
             $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de horarios
