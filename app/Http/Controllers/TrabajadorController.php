@@ -14,7 +14,7 @@ class TrabajadorController extends Controller
 {
     public function index() {
         $trabajadores = Trabajador::all();
-        return view ('rrhh.trabajadores',['trabajadores'=>$trabajadores]);
+        return view ('rrhh.trabajadores.index',['trabajadores'=>$trabajadores]);
     }
 
     //public function create(){
@@ -43,7 +43,7 @@ class TrabajadorController extends Controller
         $tipoParentesco = $this->getEnumValues('familiares','parentesco'); //Trae los valores tipo ENUM del campo parentesco de la tabla de familiares
 
         //Para retornar los datos a la vista:
-        return view('rrhh.createtrabajadores', compact ('tipoGenero','estadoCivil','tipoSangre','tipoParentesco'));
+        return view('rrhh.trabajadores.create', compact ('tipoGenero','estadoCivil','tipoSangre','tipoParentesco'));
     }
 
     public function store(Request $request){
@@ -63,7 +63,6 @@ class TrabajadorController extends Controller
         ]);
         
         $trabajador = new Trabajador();
-
         $trabajador->nombre_trabajador = $request->nombre_trabajador;
         $trabajador->fecha_naci = $request->fecha_naci;
         $trabajador->numero_seguro = $request->numero_seguro;
@@ -74,7 +73,6 @@ class TrabajadorController extends Controller
         $trabajador->cp = $request->cp;
         $trabajador->calle = $request->calle;
         $trabajador->numero_ext = $request->numero_ext;
-
         $trabajador->save();
     }
 

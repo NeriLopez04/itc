@@ -2,6 +2,6 @@
 
 @section ('content')
 <div class="section">
-    <h1>Reporte de Asistencia</h1>
+    <h1> Reporte Asistencia </h1>
 </div>
 @endsection

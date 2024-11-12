@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AsistenciaController;
+use App\Http\Controllers\OcController;
 use App\Http\Controllers\CargoController;
 use App\Http\Controllers\MonedaController;
 use Illuminate\Support\Facades\Route;
@@ -25,27 +27,37 @@ Auth::routes(['register']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Rutas de los controladores del modulo RRHH
 
-Route::resource('/rrhh/trabajadores',App\Http\Controllers\TrabajadorController::class);
-
-Route::resource('/rrhh/createfiniquito',App\Http\Controllers\FiniquitoController::class);
-
-//Route::resource('rrhh/listtrabajadores',App\Http\Controllers\TrabajadorController::class);
+Route::resource('rrhh/asistencia', App\Http\Controllers\AsistenciaController::class);
 
 Route::resource('rrhh/contrato',App\Http\Controllers\ContratoController::class);
 
+Route::resource('rrhh/finiquito', App\Http\Controllers\FiniquitoController::class);
+
+Route::resource('/rrhh/trabajadores',App\Http\Controllers\TrabajadorController::class);
 
 
 Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::class);
 
 
 
+//Rutas de los controladores del modulo PRM / Procura y Logistica
+
+Route::resource('prm/oc', App\Http\Controllers\OcController::class);
+
+Route::resource('prm/solicitud', App\Http\Controllers\SolicitudController::class);
+
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
-
-
-//Route::resource('prm/moneda', App\Http\Controllers\MonedaController::class);
-
+//Agregar a PRM / Procura y Logistica
 Route::resource('moneda', App\Http\Controllers\MonedaController::class);
+
+//Rutas de los controladores del modulo System
+
+Route::resource('system/proyecto', App\Http\Controllers\ProyectoController::class);
+
+Route::resource('system/usuario', App\Http\Controllers\UsuarioController::class);
+
 
 
 
@@ -76,13 +88,13 @@ Route::resource('moneda', App\Http\Controllers\MonedaController::class);
 
 //Route::get('/system/usuarios',[App\Http\Controllers\GestionusuarioController::class,'gestionusuarios']);
 
-Route::get('/prm/list', [App\Http\Controllers\PrmlistController::class,'index']);
+//Route::get('/prm/list', [App\Http\Controllers\PrmlistController::class,'index']);
 
-Route::get('/prm/orden',[App\Http\Controllers\PrmlistController::class,'create']);
+//Route::get('/prm/orden',[App\Http\Controllers\PrmlistController::class,'create']);
 
-Route::get('/prm/listsolicitud',[App\Http\Controllers\PrmsolicitudController::class,'index']);
+//Route::get('/prm/listsolicitud',[App\Http\Controllers\PrmsolicitudController::class,'index']);
 
-Route::get('/prm/createsolicitud',[App\Http\Controllers\PrmsolicitudController::class, 'create']);
+//Route::get('/prm/createsolicitud',[App\Http\Controllers\PrmsolicitudController::class, 'create']);
 
 //Route::get('/prm/listproveedor',[App\Http\Controllers\PrmproveedorController::class, 'index']);
 

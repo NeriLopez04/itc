@@ -259,10 +259,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <li class="nav-item">
                 <a href="{{url('rrhh/asistencia')}}" class="nav-link">
                   <i class="bi bi-calendar3"></i>
+                  
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Asistencia</p>
+                  <p>
+                    Asistencia
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
+
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url("rrhh/asistencia/create") }}"
+                  </li>
+                </ul>
+
               </li>
+
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-hand-holding"></i>
+                  <p>
+                    Listado de Cotizaciones
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{url('prm/solicitud')}}" class="nav-link">
+                      <i class="fas fa-list"></i>
+                      <p>Ver Cotizaciones</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('prm/solicitud/create')}}" class="nav-link">
+                      <i class="fas fa-plus-circle"></i>
+                      <p>Agregar Cotización</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
             </ul>
           </li>
         <li class="nav-item">
@@ -302,7 +340,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('prm/list')}}" class="nav-link">
+                <a href="{{url('prm/oc')}}" class="nav-link">
                   <i class="fas fa-file-invoice-dollar"></i>
                 <!--<i class="fa-solid fa-industry"></i>-->
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -310,14 +348,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('prm/orden')}}" class="nav-link">
+                <a href="{{url('prm/oc/create')}}" class="nav-link">
                 <i class="fas fa-credit-card"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Orden de Compra</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('prm/listsolicitud')}}" class="nav-link">
+                <a href="{{url('prm/solicitud')}}" class="nav-link">
                   <i class="fas fa-hand-holding"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Listado de Cotizaciones</p>

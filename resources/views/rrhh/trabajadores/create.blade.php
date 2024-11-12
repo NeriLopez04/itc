@@ -16,7 +16,7 @@
                     </div>
             </div>
             <div class="card-body" style="">
-                <form action="{{ url('/trabajadores') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/rrhh/trabajadores') }}" method="post" enctype="multipart/form-data">
                 @csrf
                     <div class="row">
                         <div class="col-md-12">
@@ -238,7 +238,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <br><a href="/rrhh/listtrabajadores" class="btn btn-secondary"> Cancelar </a>
+                                        <br><a href="/rrhh/trabajadores" class="btn btn-secondary"> Cancelar </a>
                                         <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
                                         <a  href="" class="btn btn-primary" style="float: right;">Agregar datos Administrativos</a>
                                         

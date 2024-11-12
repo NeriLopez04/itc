@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
-class PrmlistController extends Controller
+
+class OcController extends Controller
 {
     //Controlador para vista del listado de Ordenesde Compra 
     public function index(){
-        return view('prm.list');
+        return view('prm.oc.index');
     }
 
     public function create(){
-        return view('prm.orden');
+        return view('prm.oc.create');
     }
+
 }
