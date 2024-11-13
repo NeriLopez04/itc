@@ -38,10 +38,6 @@ Route::resource('rrhh/finiquito', App\Http\Controllers\FiniquitoController::clas
 Route::resource('/rrhh/trabajadores',App\Http\Controllers\TrabajadorController::class);
 
 
-Route::resource('system/proyectos', App\Http\Controllers\ProyectoController::class);
-
-
-
 //Rutas de los controladores del modulo PRM / Procura y Logistica
 
 Route::resource('prm/oc', App\Http\Controllers\OcController::class);
@@ -52,55 +48,12 @@ Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 //Agregar a PRM / Procura y Logistica
 Route::resource('moneda', App\Http\Controllers\MonedaController::class);
 
+
 //Rutas de los controladores del modulo System
 
 Route::resource('system/proyecto', App\Http\Controllers\ProyectoController::class);
 
 Route::resource('system/usuario', App\Http\Controllers\UsuarioController::class);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///
-
-//Este es una ruta para incertar datos desde el controlador
-
-//Route::get('/insert-cargos', [CargoController::class, 'store']);
-
-
-//Route::resource('prm/clientesprov',App\Http\Controllers\ClientesprovController::class);
-
-//Route::get('/system/createproyecto',[App\Http\Controllers\GestionproyectoController::class,'create']);
-
-//Route::get('/system/usuarios',[App\Http\Controllers\GestionusuarioController::class,'gestionusuarios']);
-
-//Route::get('/prm/list', [App\Http\Controllers\PrmlistController::class,'index']);
-
-//Route::get('/prm/orden',[App\Http\Controllers\PrmlistController::class,'create']);
-
-//Route::get('/prm/listsolicitud',[App\Http\Controllers\PrmsolicitudController::class,'index']);
-
-//Route::get('/prm/createsolicitud',[App\Http\Controllers\PrmsolicitudController::class, 'create']);
-
-//Route::get('/prm/listproveedor',[App\Http\Controllers\PrmproveedorController::class, 'index']);
-
-//Route::get('/prm/createproveedor',[App\Http\Controllers\PrmproveedorController::class,'create']);
-
-
 
 
 //Route::get('/rrhh/list', function () {

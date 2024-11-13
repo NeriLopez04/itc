@@ -9,6 +9,10 @@ class FiniquitoController extends Controller
 
 {
     public function index(){
-        return view('rrhh.createfiniquito');
+        return view('rrhh.finiquito.index');
+    }
+
+    public function create(){
+        return view('rrhh.finiquito.create');
     }
 }

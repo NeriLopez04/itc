@@ -221,13 +221,40 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <!--<li class="nav-item">
-                <a href="{{url('rrhh/createtrabajadores')}}" class="nav-link">
-                <i class="bi bi-person-plus-fill"></i>
-                   Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio
-                  <p>Agregar trabajador</p>
+
+              <li class="nav-item">
+                <a href="{{url('#')}}" class="nav-link">
+                  <i class="bi bi-person-walking"></i>
+                  
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>
+                    Trabajadores
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
                 </a>
-              </li> -->
+
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url("rrhh/trabajadores") }}" class="nav-link" >
+                    
+                    <p>
+                      <i class="bi bi-person-lines-fill"></i>
+                      Listado de Trabajadores</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('rrhh/trabajadores/create') }}" class="nav-link" >
+                    
+                    <p>
+                      <i class="bi bi-person-fill-add"></i>
+                      Agregar Trabajador
+                    </p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+
               <li class="nav-item">
                 <a href="{{url('rrhh/trabajadores')}}" class="nav-link">
                 <i class="bi bi-person-lines-fill"></i>
@@ -257,7 +284,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('rrhh/asistencia')}}" class="nav-link">
+                <a href="{{url('#')}}" class="nav-link">
                   <i class="bi bi-calendar3"></i>
                   
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -269,10 +296,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ url("rrhh/asistencia/create") }}"
+                    <a href="{{ url("/rrhh/asistencia") }}" class="nav-link" >
+                    
+                    <p>
+                      <i class="fas fa-list"></i>
+                      Reporte de Asistencia</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url('rrhh/asistencia/create') }}" class="nav-link" >
+                    
+                    <p>
+                      <i class="fas fa-plus-circle"></i>
+                      Listado de asistencia
+                    </p>
+                    </a>
                   </li>
                 </ul>
-
               </li>
 
 

@@ -11,7 +11,7 @@
 
             </div>
             <div class="card-body" style="">
-                <form action="{{ url('/rrhh') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('rrhh/finiquito') }}" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-3"  style="float:right;">
                     <h6 class="custom-text">PARA EL SISTEMA</h6> <br>

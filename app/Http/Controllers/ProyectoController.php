@@ -10,13 +10,13 @@ class ProyectoController extends Controller
 {
 
     public function index(){
-        return view('system.proyectos');
+        return view('system.proyecto.index');
     }
 
 
     
     public function create(){
-        return view('system.createproyecto');
+        return view('system.proyecto.create');
     }
 
 }
