@@ -223,7 +223,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
 
               <li class="nav-item">
-                <a href="{{url('#')}}" class="nav-link">
+                <a href="{{url('#')}}" class="nav-link active">
                   <i class="bi bi-person-walking"></i>
                   
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -236,7 +236,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url("rrhh/trabajadores") }}" class="nav-link" >
-                    
                     <p>
                       <i class="bi bi-person-lines-fill"></i>
                       Listado de Trabajadores</p>
@@ -244,47 +243,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </li>
                   <li class="nav-item">
                     <a href="{{ url('rrhh/trabajadores/create') }}" class="nav-link" >
-                    
                     <p>
                       <i class="bi bi-person-fill-add"></i>
                       Agregar Trabajador
                     </p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{url('rrhh/contrato')}}" class="nav-link">
+                    <i class="fas fa-handshake"></i>
+                    <p>Contratos</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('rrhh/createfiniquito')}}" class="nav-link">
+                      <i class="bi bi-cash-stack"></i>
+                      <p>Finiquitos</p>
+                    </a>
+                  </li>
                 </ul>
               </li>
-
-
+              
               <li class="nav-item">
-                <a href="{{url('rrhh/trabajadores')}}" class="nav-link">
-                <i class="bi bi-person-lines-fill"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Lista de trabajadores</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('rrhh/trabajadores/create')}}" class="nav-link">
-                  <i class="bi bi-person-fill-add"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Agregar Nuevo Trabajador</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('rrhh/contrato')}}" class="nav-link">
-                <i class="fas fa-handshake"></i> 
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Contratos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('rrhh/createfiniquito')}}" class="nav-link">
-                <i class="bi bi-cash-stack"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Finiquitos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('#')}}" class="nav-link">
+                <a href="{{url('#')}}" class="nav-link active">
                   <i class="bi bi-calendar3"></i>
                   
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
@@ -297,9 +278,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{ url("/rrhh/asistencia") }}" class="nav-link" >
-                    
                     <p>
-                      <i class="fas fa-list"></i>
+                      <i class="bi bi-calendar-range-fill"></i>
                       Reporte de Asistencia</p>
                     </a>
                   </li>
@@ -307,20 +287,115 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="{{ url('rrhh/asistencia/create') }}" class="nav-link" >
                     
                     <p>
-                      <i class="fas fa-plus-circle"></i>
-                      Listado de asistencia
+                      <i class="bi bi-alarm-fill"></i>
+                      Alta de aistencia
                     </p>
                     </a>
                   </li>
                 </ul>
               </li>
 
-
+            </ul>
+          </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link active">
+                <i class="bi bi-gear-fill"></i>
+              <p>
+                System
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+        <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="bi bi-building"></i>
+                  <p>Proyectos
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('system/proyecto')}}" class="nav-link">
+                    <p>
+                      <i class="bi bi-card-list"></i>
+                      Listado de Proyectos</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{url('system/proyecto')}}" class="nav-link">
+                    <p>
+                      <i class="bi bi-building-add"></i>
+                      Nuevo Proyecto</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+              
+            <li class="nav-item">
+              <a href="#" class="nav-link active">
+                <i class="bi bi-person-fill"></i>
+                    <p>Usuarios
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{url('system/usuario')}}" class="nav-link">
+                    <p>
+                      <i class="bi bi-person-lines-fill"></i>
+                      Listado de Usuarios</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{url('system/usuario/create')}}" class="nav-link">
+                    <p>
+                      <i class="bi bi-person-fill-add"></i>
+                      Agregar Usuario</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          </li>
+      
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-cash-register"></i>
+              <p>
+                PRM
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link active">
+                <i class="fas fa-credit-card"></i>
+                  <p>Orden de Compra
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url('prm/oc') }}" class= "nav-link">
+                      <i class="fas fa-file-invoice-dollar"></i>
+                      <p>Listado de Orde de Compra</p>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a href="{{ ('prm/oc/create') }}" class="nav-link">
+                      <i class="bi bi-credit-card-2-front-fill"></i>
+                      <p>Crear Orden de Compra</p>
+                    </a>
+                  </li>
+                </ul>
+
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
                   <i class="fas fa-hand-holding"></i>
                   <p>
-                    Listado de Cotizaciones
+                    Solicitud de Cotizaciones
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
@@ -339,82 +414,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </li>
                 </ul>
               </li>
-
-
-            </ul>
-          </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link active">
-                <i class="bi bi-gear-fill"></i>
-              <p>
-                System
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('system/proyectos')}}" class="nav-link">
-                <i class="bi bi-pin-map-fill"></i>
-                <!--<i class="fa-solid fa-industry"></i>-->
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Gestión de Proyectos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('system/usuarios')}}" class="nav-link">
-                <i class="bi bi-person-fill-gear"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Panel de Usuarios</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <i class="fas fa-cash-register"></i>
-              <p>
-                PRM
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{url('prm/oc')}}" class="nav-link">
-                  <i class="fas fa-file-invoice-dollar"></i>
-                <!--<i class="fa-solid fa-industry"></i>-->
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Listado de Ordenes de Compra</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('prm/oc/create')}}" class="nav-link">
-                <i class="fas fa-credit-card"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Orden de Compra</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('prm/solicitud')}}" class="nav-link">
-                  <i class="fas fa-hand-holding"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Listado de Cotizaciones</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('prm/compania')}}" class="nav-link">
-                  <i class="fas fa-address-book"></i>
-                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
-                  <p>Listado de Clientes y Proveedores</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('moneda')}}" class="nav-link">
+                <a href="#" class="nav-link active">
                   <i class="bi bi-currency-exchange"></i>
                   <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
                   <p>Monedas</p>
+                  <i class="right fas fa-angle-left"></i>
                 </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ url ('moneda/create') }}" class="nav-link">
+                      <i class="bi bi-coin"></i>
+                      <p>
+                        Crear nueva moneda</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ url ('moneda') }}" class="nav-link">
+                      <i class="bi bi-list"></i>
+                      <p>
+                        Listado de Monedas</p>
+                    </a>
+                  </li>
+                </ul>
               </li>
+                  <li class="nav nav-item">
+                    <a href="#" class="nav-link active">
+                      <i class="bi bi-buildings-fill"></i>
+                      <p>
+                        Clientes y Proveedores
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="{{url('prm/compania')}}" class="nav-link">
+                          <i class="fas fa-address-book"></i>
+                          <p>Listado de Clientes y Proveedores</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
             </ul>
           </li>
 
