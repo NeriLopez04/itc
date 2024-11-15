@@ -3,6 +3,7 @@
 use App\Http\Controllers\AsistenciaController;
 use App\Http\Controllers\OcController;
 use App\Http\Controllers\CargoController;
+use App\Http\Controllers\CompaniaController;
 use App\Http\Controllers\MonedaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -45,9 +46,10 @@ Route::resource('prm/oc', App\Http\Controllers\OcController::class);
 Route::resource('prm/solicitud', App\Http\Controllers\SolicitudController::class);
 
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
+
 //Agregar a PRM / Procura y Logistica
 Route::resource('moneda', App\Http\Controllers\MonedaController::class);
-
+Route::get('prm/compania/create',[CompaniaController::class, 'create'])->name('compania.create');
 
 //Rutas de los controladores del modulo System
 

@@ -322,7 +322,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{url('system/proyecto')}}" class="nav-link">
+                  <a href="{{url('system/proyecto/create')}}" class="nav-link">
                     <p>
                       <i class="bi bi-building-add"></i>
                       Nuevo Proyecto</p>
@@ -451,6 +451,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <a href="{{url('prm/compania')}}" class="nav-link">
                           <i class="fas fa-address-book"></i>
                           <p>Listado de Clientes y Proveedores</p>
+                        </a>
+                      </li>
+                      <li class="nav nav-treeview">
+                        <a href="{{ url('prm/compania/create') }}" class="nav-link">
+                          <i class="fa-solid fa-square-plus"></i>
+                          <p>Agregar Nuevo Cliente/Proveedor</p>
                         </a>
                       </li>
                     </ul>

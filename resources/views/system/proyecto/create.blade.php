@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="form-group-md-2" style="float:right">
-                       <br> <a href="listproyectos" class="btn btn-primary"> Agregar Cliente</a>
+                       <br> <a href="{{ url('prm/compania/create') }}" class="btn btn-primary"> Agregar Cliente</a>
                     </div>
                     
                 </div><br><br><br>
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <br><a href="/listproyectos" class="btn btn-secondary"> Cancelar </a>
+                        <br><a href="/index" class="btn btn-secondary"> Cancelar </a>
                         <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
                         
                     </div>
