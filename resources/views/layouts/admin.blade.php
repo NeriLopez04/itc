@@ -249,16 +249,56 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </p>
                     </a>
                   </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('#')}}" class="nav-link active">
+                  <i class="fas fa-handshake"></i>
+                  
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>
+                    Contratos
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="{{url('rrhh/contrato')}}" class="nav-link">
-                    <i class="fas fa-handshake"></i>
-                    <p>Contratos</p>
+                      <i class="bi bi-person-lines-fill"></i>
+                      <p>Lista de Contratos</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{url('rrhh/createfiniquito')}}" class="nav-link">
-                      <i class="bi bi-cash-stack"></i>
-                      <p>Finiquitos</p>
+                    <a href="{{url('rrhh/contrato/create')}}" class="nav-link">
+                      <i class="fas fa-handshake"></i>
+                      <p>Nuevo Contrato</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('#')}}" class="nav-link active">
+                  <i class="bi bi-cash-stack"></i>
+                  
+                  <!-- Con el comando "<p> </p>" el texto se encapsula y al momento de ejecutar una accion de retraer, el texto no se sale de su espacio -->
+                  <p>
+                    Finiquitos
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{url('rrhh/finiquito')}}" class="nav-link">
+                      <i class="bi bi-person-lines-fill"></i>
+                      <p>Lista de Finiquitos</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('rrhh/finiquito/create')}}" class="nav-link">
+                      <i class="fas fa-handshake"></i>
+                      <p>Crear Finiquito</p>
                     </a>
                   </li>
                 </ul>

@@ -10,7 +10,7 @@ class Proyecto extends Model
     use HasFactory;
 
     //protected $table ='proyectos';
-    protected $fillable = ['id_itc', 'nombre_proy', 'reg_patronal', 'categoria_laboral', 'cp', 'pais', 'estado', 'ciudad', 'colonia', 'calle', 'numero_ext', 'numero_int', 'fecha_inicio', 'fecha_fin', 'monto_contrato', 'comentarios'];
+    protected $fillable = ['id_itc', 'nombre_proy', 'reg_patronal', 'categoria_laboral', 'cp', 'pais', 'estado', 'ciudad', 'colonia', 'calle', 'numero_ext', 'numero_int', 'fecha_inicio', 'fecha_fin', 'monto_contrato', 'comentarios', 'moneda_id'];
     
     public function trabajadores(){
         return $this->belongsTo(Trabajador::class,'proyecto_id','id_itc');

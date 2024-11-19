@@ -23,7 +23,7 @@ class TrabajadorController extends Controller
     //}
     public function getEnumValues($table,$field)
     {
-        // Obtén los valores ENUM del campo 'genero' de la tabla 'genero'
+        // Obtén los valores ENUM del campo 'genero' de la tabla 'generos'
         $type = DB::select("SHOW COLUMNS FROM {$table} WHERE Field = '$field'")[0]->Type;
 
         // Extrae los valores entre paréntesis

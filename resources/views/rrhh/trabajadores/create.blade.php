@@ -119,7 +119,6 @@
                                                 <option value="{{ $estado_civil }}">{{ ucfirst($estado_civil) }}</option>
                                             @endforeach
                                         </select>
-                                        
                                     </div>
                                 </div>
 

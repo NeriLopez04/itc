@@ -144,6 +144,19 @@
                             </div>
                         </div>
 
+                        <!-- Ejemplo de un select 
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="estado_civil">Estado Civil</label><b>*</b>
+                                <select class="form-control" name="estado_civil" id="estado_civil"@required(true)>
+                                    @foreach($estadoCivil as $estado_civil)
+                                        <option value="{{ $estado_civil }}">{{ ucfirst($estado_civil) }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        -->
+
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for=""> Comentarios </label>
@@ -161,7 +174,7 @@
 
         <style>
             .custom-text {
-                color: rgba(88, 87, 87, 0.767); /* Cambia el color aquí */
+                color: rgba(88, 87, 87, 0.767); /* Cambia el color del texto de submodulos aquí */
             }
         </style>
 

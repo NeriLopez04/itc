@@ -45,7 +45,7 @@ class TrabajadorSeeder extends Seeder
         $on = Sangre::where('sangre','O-')->first()->id;
 
         //Para obtener los ID's de los tiposde Departamento segun el valor en la tabla
-        $direccion = Departamento::where('departament','Direccion')->first()->id;
+       /* $direccion = Departamento::where('departament','Direccion')->first()->id;
         $admin = Departamento::where('departament','Administracion')->first()->id;
         $calidad = Departamento::where('departament','Calidad')->first()->id;
         $seguridad = Departamento::where('departament','Seguridad')->first()->id;
@@ -64,10 +64,11 @@ class TrabajadorSeeder extends Seeder
         $central = Proyecto::where('nombre_proy', 'Oficina Central');
 
         //Para obtener los ID's de los horarios
-        $horasObligadas = Horario::where('horas_obligadas', '8');
+        $horasObligadas = Horario::where('horas_obligadas', '8'); */
 
 
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Neri Esau López Lopez',
             'numero_seguro'=>'93784903874',
@@ -90,16 +91,17 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $soltero,
             'genero_id' => $masculino,
             'sangre_id' => $op,
-            'departamento_id' => $direccion,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $direccion,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
 
         ]);
 
         
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Mario Daniel Ramos Lino',
             'numero_seguro'=>'93784903842',
@@ -122,14 +124,15 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $soltero,
             'genero_id' => $masculino,
             'sangre_id' => $op,
-            'departamento_id' => $calidad,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $calidad,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
 
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Damaris Melina Lopez Lopez',
             'numero_seguro'=>'93784903872',
@@ -152,13 +155,14 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $separado,
             'genero_id' => $femenino,
             'sangre_id' => $on,
-            'departamento_id' => $mmto,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $mmto,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Omar Edair Rodriguez Resendez',
             'numero_seguro'=>'9378230274',
@@ -181,13 +185,14 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $soltero,
             'genero_id' => $masculino,
             'sangre_id' => $ap,
-            'departamento_id' => $calidad,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $calidad,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Pedro Ruiz Medrano',
             'numero_seguro'=>'93787462374',
@@ -210,13 +215,14 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $divorciado,
             'genero_id' => $masculino,
             'sangre_id' => $bn,
-            'departamento_id' => $compras,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $compras,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Miguel Angel Villa Melendez',
             'numero_seguro'=>'93784916212',
@@ -239,13 +245,14 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $soltero,
             'genero_id' => $masculino,
             'sangre_id' => $an,
-            'departamento_id' => $mmto,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $mmto,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Ximena Hernandez Lopez',
             'numero_seguro'=>'98276543874',
@@ -268,13 +275,14 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $soltero,
             'genero_id' => $masculino,
             'sangre_id' => $op,
-            'departamento_id' => $mmto,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $mmto,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Nancy Michelle Cano Martinez',
             'numero_seguro'=>'93787398761',
@@ -297,14 +305,15 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $viudo,
             'genero_id' => $femenino,
             'sangre_id' => $abn,
-            'departamento_id' => $seguridad,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $seguridad,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
 
         Trabajador::create([
+            'id'=>str_pad(rand(0,999999),5),
             'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
             'nombre_trabajador'=>'Victor Manuel Pérez Gonzales',
             'numero_seguro'=>'93787329737',
@@ -327,15 +336,16 @@ class TrabajadorSeeder extends Seeder
             'estadocivil_id' => $casado,
             'genero_id' => $masculino,
             'sangre_id' => $bp,
-            'departamento_id' => $admin,
-            'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+            //'departamento_id' => $admin,
+            //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
         ]);
     
 
     Trabajador::create([
+        'id'=>str_pad(rand(0,999999),5),
         'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
         'nombre_trabajador'=>'Jose Alfredo Díaz Vazquez',
         'numero_seguro'=>'93787392726',
@@ -358,14 +368,15 @@ class TrabajadorSeeder extends Seeder
         'estadocivil_id' => $unionLibre,
         'genero_id' => $masculino,
         'sangre_id' => $abn,
-        'departamento_id' => $compras,
-        'categoria_id' => $auxiliar,
-            'credito_id' => $si,
-            'proyecto_id' => $central,
-            'horario_id' => $horasObligadas
+        //'departamento_id' => $compras,
+        //'categoria_id' => $auxiliar,
+            //'credito_id' => $si,
+            //'proyecto_id' => $central,
+            //'horario_id' => $horasObligadas
     ]);
 
     Trabajador::create([
+        'id'=>str_pad(rand(0,999999),5),
         'id_itc'=>str_pad(rand(0,999999),5,'ITC_',STR_PAD_LEFT),
         'nombre_trabajador'=>'Sergio Ruben Mota Vallejo',
         'numero_seguro'=>'73828976478',
@@ -388,11 +399,11 @@ class TrabajadorSeeder extends Seeder
         'estadocivil_id' => $unionLibre,
         'genero_id' => $masculino,
         'sangre_id' => $abp,
-        'departamento_id' => $mmto,
-        'categoria_id' => $auxiliar,
-        'credito_id' => $si,
-        'proyecto_id' => $central,
-        'horario_id' => $horasObligadas
+        //'departamento_id' => $mmto,
+        //'categoria_id' => $auxiliar,
+        //'credito_id' => $si,
+        //'proyecto_id' => $central,
+        //'horario_id' => $horasObligadas
 
     ]);
 

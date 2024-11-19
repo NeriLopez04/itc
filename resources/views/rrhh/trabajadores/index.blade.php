@@ -58,7 +58,7 @@
                                 <a  href="/rrhh/contrato/create" class="btn btn-success">Contrato</a>
                             </td>
                             <td>
-                                <a  href="createfiniquito" class="btn btn-warning">Finiquito</a>
+                                <a  href="/rrhh/finiquito/create" class="btn btn-warning">Finiquito</a>
                             </td>
                     </tr>
                     @endforeach

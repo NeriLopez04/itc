@@ -40,6 +40,10 @@ return new class extends Migration
             //$table->unsignedBigInteger('familiares_id');    //
             //$table->foreign('familiares_id')->references('id')->on('familiares')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de familiares
 
+
+            //----------------------------------------------------------------------------------------------------------------
+            //------------------------------------- RELACIONES A DEBLOQUEAR ----------------------------
+
             $table->unsignedBigInteger('estadocivil_id');
             $table->foreign('estadocivil_id')->references('id')->on('estadociviles')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de Estado Civil
 
@@ -49,20 +53,23 @@ return new class extends Migration
             $table->unsignedBigInteger('sangre_id');
             $table->foreign('sangre_id')->references('id')->on('sangres')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de Sangre
 
-            $table->unsignedBigInteger('departamento_id');
-            $table->foreign('departamento_id')->references('id')->on('departamentos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la  tabla de Departamentos
+            //$table->unsignedBigInteger('departamento_id');
+            //$table->foreign('departamento_id')->references('id')->on('departamentos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la  tabla de Departamentos
 
-            $table->unsignedBigInteger('categoria_id')->nullable();
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de categorias
+            //$table->unsignedBigInteger('categoria_id')->nullable();
+            //$table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');//Llave foranea de la tabla de categorias
 
-            $table->unsignedBigInteger('credito_id')->nullable();
-            $table->foreign('credito_id')->references('id')->on('creditos')->onDelete('cascade')->onUpdate('cascade');//Lave foranea de la tabla de Creditos
+            //$table->unsignedBigInteger('credito_id')->nullable();
+            //$table->foreign('credito_id')->references('id')->on('creditos')->onDelete('cascade')->onUpdate('cascade');//Lave foranea de la tabla de Creditos
 
-            $table->string('proyecto_id')->nullable(); //No sigue la convencional
-            $table->foreign('proyecto_id')->references('id_itc')->on('proyectos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de Proyecto
+            //$table->string('proyecto_id')->nullable(); //No sigue la convencional
+            //$table->foreign('proyecto_id')->references('id_itc')->on('proyectos')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de Proyecto
             
-            $table->unsignedBigInteger('horario_id')->nullable();
-            $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('set null')->onUpdate('cascade');//Llave foranea de la tabla Horarios
+            //$table->unsignedBigInteger('horario_id')->nullable();
+            //$table->foreign('horario_id')->references('id')->on('horarios')->onDelete('set null')->onUpdate('cascade');//Llave foranea de la tabla Horarios
+
+            //---------------------------------------------------------------------------------------------------------------------------------
+            // ---------------------------------------------------------DESBLOQUEAR* ----------------------------------------------------------
 
             //CUANDO LA RELACION ES DE 1 A MUCHOS O LO CONTRARIO, LA LLAVE FORANEA SIEMPRE VA EN LA TABLA QUE TIENE LA RELACION DE MUCHOS (LA QUE TIENE
             //MUCHOS REGISTROS)

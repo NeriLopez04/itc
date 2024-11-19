@@ -8,10 +8,10 @@ class ContratoController extends Controller
 
 {
     public function index(){
-        return view ('rrhh.contrato');
+        return view ('rrhh.contrato.index');
     }
 
     public function create(){
-        return view ('rrhh.createcontrato');
+        return view ('rrhh.contrato.create');
     }
 }
