@@ -29,18 +29,19 @@ return new class extends Migration
             $table->date('fecha_fin');
             $table->decimal('monto_contrato',10,2);
             $table->text('comentarios');
-            $table->unsignedBigInteger('horario_id');
-            $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de horarios
+            //---------------------DESCOMENTAR** (horario_id, regobra_id, compania_id)---------------------
+            //$table->unsignedBigInteger('horario_id');
+            //$table->foreign('horario_id')->references('id')->on('horarios')->onDelete('cascade')->onUpdate('cascade'); //Llave foranea de la tabla de horarios
             $table->unsignedBigInteger('moneda_id');
             $table->foreign('moneda_id')->references('id')->on('monedas')->onDelete('cascade')->onUpdate('cascade');//restrict por si hay mas registros vinvulados, no se borren
                                                                                                 //todos. Si el programa detecta que hay registros ligados, 
                                                                                                 //no deja eliminar? Validar.
+            //---------------------DESCOMENTAR** (regobra_id, compania_id)-----------------
+            //$table->string('regobra_id')->nullable();
+            //$table->foreign('regobra_id')->references('reg_obra')->on('regobras')->onDelete('set null')->onUpdate('cascade');
 
-            $table->string('regobra_id')->nullable();
-            $table->foreign('regobra_id')->references('reg_obra')->on('regobras')->onDelete('set null')->onUpdate('cascade');
-
-            $table->string('compania_id')->nullable();
-            $table->foreign('compania_id')->references('id_compania')->on('companias')->onDelete('set null')->onUpdate('cascade');
+            //$table->string('compania_id')->nullable();
+            //$table->foreign('compania_id')->references('id_compania')->on('companias')->onDelete('set null')->onUpdate('cascade');
             
             $table->timestamps();
         });

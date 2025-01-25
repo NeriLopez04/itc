@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Moneda extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = ['coin','conversion'];
 
     // Casts para asegurar que 'conversion' sea un decimal

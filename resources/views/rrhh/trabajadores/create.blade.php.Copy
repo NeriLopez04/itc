@@ -22,64 +22,13 @@
                         <div class="col-md-12">
                             Datos Personales <br>
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Nombre Completo</label><b>*</b>
                                         <input type="text" name="nombre_trabajador" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                            
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="file">Foto</label>
-                                        <input type="file" name="foto" id="file" class="form-control">
-                                        <!-- Espacio reservado para la vista previa -->
-                                        <div id="list" class="image-preview"></div>
-                                    </div>
-                                </div>
-                               
-                                <!-- Estilos -->
-                                <style>
-                                    .image-preview {
-                                        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-                                        min-height: 200px; /* Altura mínima fija para evitar desplazamientos */
-                                        border: 1px solid #ccc; /* Opcional: para dar una referencia visual del área */
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        background-color: #f9f9f9;
-                                        overflow: hidden; /* Asegura que la imagen no se desborde */
-                                    }
-                                
-                                    .image-preview img {
-                                        max-width: 100%;
-                                        max-height: 100%;
-                                    }
-                                </style>
-                                
-                                <!-- Script -->
-                                <script>
-                                    function archivo(evt) {
-                                        const files = evt.target.files;
-                                
-                                        for (let i = 0, f; (f = files[i]); i++) {
-                                            if (!f.type.match("image.*")) continue;
-                                
-                                            const reader = new FileReader();
-                                            reader.onload = function (e) {
-                                                document.getElementById("list").innerHTML = `
-                                                    <img src="${e.target.result}" alt="Vista previa" />
-                                                `;
-                                            };
-                                            reader.readAsDataURL(f);
-                                        }
-                                    }
-                                    document.getElementById("file").addEventListener("change", archivo, false);
-                                </script>                                
-
-                            </div>
-
-                            <div class="row">
+                    
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="birthdate">Fecha de Nacimiento</label><b>*</b>
@@ -107,13 +56,138 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-2">
+
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="">RFC</label><b>*</b>
-                                        <input type="text" name="rfc" class="form-control"@required(true)>
+                                        <label for="file">Foto</label>
+                                        <input type="file" name="foto" id="file" class="form-control">
+                                        <!-- Contenedor para la vista previa de la imagen -->
+                                        <div class="image-preview-container mt-2">
+                                            <output id="list" class="image-preview"></output>
+                                        </div>
                                     </div>
                                 </div>
-                                            
+                                
+                                <!-- Estilos personalizados -->
+                                <style>
+                                    .image-preview-container {
+                                        border: 1px solid #ccc;
+                                        padding: 10px;
+                                        height: 250px; /* Aumentar la altura para acomodar la imagen */
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background-color: #f9f9f9;
+                                    }
+                                
+                                    .image-preview img {
+                                        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+                                        max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+                                    }
+                                
+                                    form {
+                                        min-height: 600px; /* Aumentar la altura mínima del formulario */
+                                    }
+                                </style>
+                                
+                                <script>
+                                    function archivo(evt) {
+                                        var files = evt.target.files;
+                                        for (var i = 0, f; f = files[i]; i++) {
+                                            if (!f.type.match('image.*')) {
+                                                continue;
+                                            }
+                                            var reader = new FileReader();
+                                            reader.onload = (function(theFile) {
+                                                return function(e) {
+                                                    document.getElementById("list").innerHTML = [
+                                                        '<img class="thumb thumbnail" src="',
+                                                        e.target.result,
+                                                        '" title="', escape(theFile.name), '"/>'
+                                                    ].join('');
+                                                };
+                                            })(f);
+                                            reader.readAsDataURL(f);
+                                        }
+                                    }
+                                    document.getElementById('file').addEventListener('change', archivo, false);
+                                </script>
+                                
+
+
+                                 <!--<div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="file">Foto</label>
+                                        <input type="file" name="foto" id="file" class="form-control">
+                                        <center>
+                                            <output id="list" class="image-preview"></output>
+                                        </center>
+                                    </div>
+                                </div>
+
+                                    // Estilos personalizados 
+                                    <style>
+                                        .image-preview img {
+                                            max-width: 80%; /* Asegura que la imagen no exceda el ancho del contenedor */
+                                            height: auto;
+                                            max-height: 105px; /* Limita la altura máxima para mantener la uniformidad */
+                                        }
+                                    
+                                        .custom-form-height .form-control {
+                                            height: auto; /* Garantiza que todos los inputs en esta clase mantengan su altura ajustada al contenido */
+                                        }
+                                    </style>
+
+                                    <script>
+                                        function archivo(evt) {
+                                            var files = evt.target.files;
+                                            for (var i = 0, f; f = files[i]; i++) {
+                                                if (!f.type.match('image.*')) {
+                                                    continue;
+                                                }
+                                                var reader = new FileReader();
+                                                reader.onload = (function(theFile) {
+                                                    return function(e) {
+                                                        document.getElementById("list").innerHTML = [
+                                                            '<img class="thumb thumbnail" src="',
+                                                            e.target.result,
+                                                            '" title="', escape(theFile.name), '"/>'
+                                                        ].join('');
+                                                    };
+                                                })(f);
+                                                reader.readAsDataURL(f);
+                                            }
+                                        }
+                                        document.getElementById('file').addEventListener('change', archivo, false);
+                                    </script>
+
+                                        Codigo Oirginal 
+
+                                        <script>
+                                            function archivo(evt){
+                                                var files = evt.target.files;
+                                                //obtenemos la imagen del campo "file".
+                                                for (var i=0, f; f = files[i]; i++){
+                                                    //solo admitimos imagenes.
+                                                    if (!f.type.match('image.*')){
+                                                        continue;
+                                                    }
+                                                    var reader = new FileReader();
+                                                    reader.onload = (function (theFile){
+                                                        return function (e){
+                                                            //insertamos la imagen
+                                                            document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="',e.target.result,'"width="70%" title="', escape(theFile.name),'"/>'].join('');
+                                                        };
+                                                    }) (f);
+                                                    reader.readAsDataURL(f);
+                                                }
+
+                                            }
+                                            document.getElementById('file').addEventListener('change',archivo, false);
+                                        </script>
+                                        
+                                    </div>
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
@@ -122,7 +196,12 @@
                                         <input type="number" name="numero_seguro" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                                
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="">RFC</label><b>*</b>
+                                        <input type="text" name="rfc" class="form-control"@required(true)>
+                                    </div>
+                                </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="">CURP</label><b>*</b>

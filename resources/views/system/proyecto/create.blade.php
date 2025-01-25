@@ -108,7 +108,7 @@
                     <br><h6 class="custom-text">DATOS EN GENERAL</h6>
                     <div class="row">
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Registro Patronal</label><b>*</b>
                                 <input type="text" id="reg_patronal" name="reg_patronal" class="form-control"@required(true)>
@@ -137,10 +137,15 @@
                         </div>
 
                         <!--  Campo de tabla relacionada  -->
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="form-group">
-                                <label for=""> Moneda del Contrato </label><b>*</b>
-                                <input type="text" name="moneda" class="select"@readonly(true)>
+                                <label for="moneda_id">Moneda del Contrato</label><b>*</b>
+                                <select name="moneda_id" id="moneda_id" class="form-control" required>
+                                    <option value="">Seleccione una moneda</option>
+                                    @foreach($monedas as $moneda)
+                                        <option value="{{ $moneda->id }}">{{ $moneda->coin }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
 
@@ -149,9 +154,7 @@
                             <div class="form-group">
                                 <label for="estado_civil">Estado Civil</label><b>*</b>
                                 <select class="form-control" name="estado_civil" id="estado_civil"@required(true)>
-                                    @foreach($estadoCivil as $estado_civil)
-                                        <option value="{{ $estado_civil }}">{{ ucfirst($estado_civil) }}</option>
-                                    @endforeach
+                                
                                 </select>
                             </div>
                         </div>

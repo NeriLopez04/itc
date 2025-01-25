@@ -387,7 +387,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{url('system/usuario/create')}}" class="nav-link">
+                  <a href="{{url('/system/usuario/create')}}" class="nav-link">
                     <p>
                       <i class="bi bi-person-fill-add"></i>
                       Agregar Usuario</p>
@@ -423,7 +423,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </a>
                   </li>
                   <li class="nav-item active">
-                    <a href="{{ ('prm/oc/create') }}" class="nav-link">
+                    <a href="{{ ('/prm/oc/create') }}" class="nav-link">
                       <i class="bi bi-credit-card-2-front-fill"></i>
                       <p>Crear Orden de Compra</p>
                     </a>
@@ -493,9 +493,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                           <p>Listado de Clientes y Proveedores</p>
                         </a>
                       </li>
-                      <li class="nav nav-treeview">
-                        <a href="{{ url('prm/compania/create') }}" class="nav-link">
-                          <i class="fa-solid fa-square-plus"></i>
+                      <li class="nav-item">
+                        <a href="{{url('prm/compania/create')}}" class="nav-link">
+                          <i class="bi bi-journal-plus"></i>
                           <p>Agregar Nuevo Cliente/Proveedor</p>
                         </a>
                       </li>
