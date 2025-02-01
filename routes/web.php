@@ -7,6 +7,8 @@ use App\Http\Controllers\CompaniaController;
 use App\Http\Controllers\MonedaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Livewire\MonedaIndex;
+use App\Http\Livewire\MonedaForm;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +20,17 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('index');
 })->middleware(middleware: 'auth');;
 
 //Auth::routes(['register'=>false]);
+
+Route::get('/monedas', MonedaIndex::class)->name('monedas.index');
+Route::get('/monedas/create', MonedaForm::class)->name('monedas.create');
+Route::get('/monedas/edit/{monedaId}', MonedaForm::class)->name('monedas.edit');
 
 Auth::routes(['register']);
 
@@ -48,7 +56,9 @@ Route::resource('prm/solicitud', App\Http\Controllers\SolicitudController::class
 Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 
 //Agregar a PRM / Procura y Logistica
-Route::resource('moneda', App\Http\Controllers\MonedaController::class);
+
+//Route::resource('moneda', App\Http\Livewire\MonedaEdit::class);
+
 Route::get('prm/compania/create',[CompaniaController::class, 'create'])->name('compania.create');
 
 //Rutas de los controladores del modulo System
@@ -64,4 +74,4 @@ Route::resource('system/usuario', App\Http\Controllers\UsuarioController::class)
 
 //Route::get('/rrhh/create', function () {
 //    return view('rrhh.create');
-//})->middleware(middleware: 'auth');;
+//})->middleware(middleware: 'auth');

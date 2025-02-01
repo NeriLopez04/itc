@@ -4,6 +4,7 @@ This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
+  
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,9 +27,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{ asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 
+  @livewireStyles
 
 </head>
 <body class="hold-transition sidebar-mini">
+  
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -463,20 +466,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="{{ url ('moneda/create') }}" class="nav-link">
-                      <i class="bi bi-coin"></i>
-                      <p>
-                        Crear nueva moneda</p>
-                    </a>
+                      <a href="{{ route('monedas.create') }}" class="nav-link">
+                          <i class="bi bi-coin"></i>
+                          <p>Crear nueva moneda</p>
+                      </a>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ url ('moneda') }}" class="nav-link">
-                      <i class="bi bi-list"></i>
-                      <p>
-                        Listado de Monedas</p>
-                    </a>
+                      <a href="{{ route('monedas.index') }}" class="nav-link">
+                          <i class="bi bi-list"></i>
+                          <p>Listado de Monedas</p>
+                      </a>
                   </li>
-                </ul>
+              </ul>
               </li>
                   <li class="nav nav-item">
                     <a href="#" class="nav-link active">
@@ -558,7 +559,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
+@livewireScripts
 
 <!-- Bootstrap 4 -->
 <script src="{{asset ('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -580,5 +581,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+
+@livewireScripts
 </body>
 </html>

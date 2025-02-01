@@ -117,7 +117,7 @@
 
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="birthdate">Fecha de Nacimiento</label><b>*</b>
+                                <label for="birthdate">Inicio de Proyecto</label><b>*</b>
                                 <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control"@required(true)>
                             </div>
                         </div>
@@ -149,16 +149,7 @@
                             </div>
                         </div>
 
-                        <!-- Ejemplo de un select 
-                        <div class="col-md-2">
-                            <div class="form-group">
-                                <label for="estado_civil">Estado Civil</label><b>*</b>
-                                <select class="form-control" name="estado_civil" id="estado_civil"@required(true)>
-                                
-                                </select>
-                            </div>
-                        </div>
-                        -->
+                        <!-- Agregar opcion para agregar logotipo de la empresa y los documentos puedan salir con el logo -->
 
                         <div class="col-md-12">
                             <div class="form-group">
