@@ -466,13 +466,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                      <a href="{{ route('monedas.create') }}" class="nav-link">
+                      <a href="{{ route('moneda.create') }}" class="nav-link">
                           <i class="bi bi-coin"></i>
                           <p>Crear nueva moneda</p>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('monedas.index') }}" class="nav-link">
+                      <a href="{{ route('moneda.index') }}" class="nav-link">
                           <i class="bi bi-list"></i>
                           <p>Listado de Monedas</p>
                       </a>

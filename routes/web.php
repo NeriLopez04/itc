@@ -28,10 +28,6 @@ Route::get('/', function () {
 
 //Auth::routes(['register'=>false]);
 
-Route::get('/monedas', MonedaIndex::class)->name('monedas.index');
-Route::get('/monedas/create', MonedaForm::class)->name('monedas.create');
-Route::get('/monedas/edit/{monedaId}', MonedaForm::class)->name('monedas.edit');
-
 Auth::routes(['register']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -57,7 +53,7 @@ Route::resource('prm/compania', App\Http\Controllers\CompaniaController::class);
 
 //Agregar a PRM / Procura y Logistica
 
-//Route::resource('moneda', App\Http\Livewire\MonedaEdit::class);
+Route::resource('moneda', App\Http\Controllers\MonedaController::class);
 
 Route::get('prm/compania/create',[CompaniaController::class, 'create'])->name('compania.create');
 
