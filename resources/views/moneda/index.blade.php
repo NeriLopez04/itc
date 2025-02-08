@@ -8,7 +8,7 @@ php?>
         <div class="card-header">
             <h3 class="card-title">Listado de Monedas</h3>
             <div class="card-tools">
-                <a href="/moneda/create" class="btn btn-primary">
+                <a href="{{ route('moneda.create') }}" class="btn btn-primary">
                     <i class="bi bi-person-plus-fill"></i> Nueva Moneda
                 </a>
             </div>
