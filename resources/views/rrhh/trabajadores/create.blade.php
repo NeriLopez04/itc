@@ -16,71 +16,19 @@
                     </div>
             </div>
             <div class="card-body" style="">
-                <form action="{{ url('/rrhh/trabajadores') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/trabajadores') }}" method="post" enctype="multipart/form-data">
                 @csrf
                     <div class="row">
-                        <div class="col-md-12">
-                            Datos Personales <br>
+                        <div class="col-md-9">
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Nombre Completo</label><b>*</b>
                                         <input type="text" name="nombre_trabajador" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                            
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="file">Foto</label>
-                                        <input type="file" name="foto" id="file" class="form-control">
-                                        <!-- Espacio reservado para la vista previa -->
-                                        <div id="list" class="image-preview"></div>
-                                    </div>
-                                </div>
-                               
-                                <!-- Estilos -->
-                                <style>
-                                    .image-preview {
-                                        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-                                        min-height: 200px; /* Altura mínima fija para evitar desplazamientos */
-                                        border: 1px solid #ccc; /* Opcional: para dar una referencia visual del área */
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        background-color: #f9f9f9;
-                                        overflow: hidden; /* Asegura que la imagen no se desborde */
-                                    }
-                                
-                                    .image-preview img {
-                                        max-width: 100%;
-                                        max-height: 100%;
-                                    }
-                                </style>
-                                
-                                <!-- Script -->
-                                <script>
-                                    function archivo(evt) {
-                                        const files = evt.target.files;
-                                
-                                        for (let i = 0, f; (f = files[i]); i++) {
-                                            if (!f.type.match("image.*")) continue;
-                                
-                                            const reader = new FileReader();
-                                            reader.onload = function (e) {
-                                                document.getElementById("list").innerHTML = `
-                                                    <img src="${e.target.result}" alt="Vista previa" />
-                                                `;
-                                            };
-                                            reader.readAsDataURL(f);
-                                        }
-                                    }
-                                    document.getElementById("file").addEventListener("change", archivo, false);
-                                </script>                                
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2">
+                    
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="birthdate">Fecha de Nacimiento</label><b>*</b>
                                         <input type="date" id="birthdate" name="fecha_naci" class="form-control"@required(true)>
@@ -92,7 +40,7 @@
                                         <input type="text" id="age" name="edad" class="form-control"@readonly(true)>
                                     </div>
                                 </div>
-
+    
                                 <div class="col-md-1.5">
                                     <div class="form-group">
                                         <label for="genero">Sexo</label><b>*</b>
@@ -102,37 +50,29 @@
                                                 <option value="{{ $genero }}">{{ ucfirst($genero) }}</option>
                                             @endforeach
                                         </select>
-
+    
                                         <!--<input type="submit" class="form-control"> -->
                                     </div>
                                 </div>
-                                
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">RFC</label><b>*</b>
-                                        <input type="text" name="rfc" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                                            
-                            </div>
-                            <div class="row">
+    
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="">Numero de Seguro Social</label><b>*</b>
                                         <input type="number" name="numero_seguro" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                                
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="">RFC</label><b>*</b>
+                                        <input type="text" name="rfc" class="form-control"@required(true)>
+                                    </div>
+                                </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="">CURP</label><b>*</b>
                                         <input type="text" name="curp" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                                
-                            </div>
-                            
-                            <div class="row">
 
                                 <div class="col-md-2">
                                     <div class="form-group">
@@ -142,6 +82,7 @@
                                                 <option value="{{ $estado_civil }}">{{ ucfirst($estado_civil) }}</option>
                                             @endforeach
                                         </select>
+                                        
                                     </div>
                                 </div>
 
@@ -155,13 +96,13 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="">Telefono </label><b>*</b>
                                         <input type="number" name="telefono" class="form-control"@required(true)>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="">Telefono 2</label>
                                         <input type="number" name="telefono2" class="form-control"@required(false)>
@@ -173,11 +114,8 @@
                                         <input type="email" name="correo" class="form-control"@required(false)>
                                     </div>
                                 </div>
-                                
-                            </div>
-                            Dirección <br>
-                            <div class="row">
-                                <div class="col-md-1">
+
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="">CP</label><b>*</b>
                                         <input type="number" name="cp" class="form-control"@required(true)>
@@ -189,84 +127,102 @@
                                         <input type="text" name="pais" class="form-control">
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Estado</label>
-                                        <input type="text" name="estado" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="">Ciudad</label>
-                                        <input type="text" name="ciudad" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="">Colonia</label>
-                                        <input type="text" name="colonia" class="form-control">
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="file">Foto</label>
+                                <input type="file" name="foto" id="file" class="form-control">
+                                <!-- Espacio reservado para la vista previa -->
+                                <div id="list" class="image-preview"></div>
+                            </div>
+                        </div>
+                        
+                        <style>
+                            .image-preview {
+                                width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+                                min-height: 180px; /* Altura mínima fija para evitar desplazamientos */
+                                border: 1px solid #ccc; /* Opcional: para dar una referencia visual del área */
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #f9f9f9;
+                                overflow: hidden; /* Asegura que la imagen no se desborde */
+                            }
+                        
+                            .image-preview img {
+                                max-width: 100%;
+                                max-height: 100%;
+                            }
+                        </style>
+
+                        <script>
+                            function archivo(evt) {
+                                const files = evt.target.files;
+
+                                for (let i = 0, f; (f = files[i]); i++) {
+                                    if (!f.type.match("image.*")) continue;
+
+                                    const reader = new FileReader();
+                                    reader.onload = function (e) {
+                                        document.getElementById("list").innerHTML = `
+                                            <img src="${e.target.result}" alt="Vista previa" />
+                                        `;
+                                    };
+                                    reader.readAsDataURL(f);
+                                }
+                            }
+                            document.getElementById("file").addEventListener("change", archivo, false);
+                        </script>
+
+                        <!--
+                            <div class="form-group">
+                                <label for="file">Foto</label>
+                                <input type="file" name="foto" id="file" class="form-control">
+                                <center><output id="list"></output></center>
+                                <script>
+                                    function archivo(evt){
+                                        var files = evt.target.files;
+                                        //obtenemos la imagen del campo "file".
+                                        for (var i=0, f; f = files[i]; i++){
+                                            //solo admitimos imagenes.
+                                            if (!f.type.match('image.*')){
+                                                continue;
+                                            }
+                                            var reader = new FileReader();
+                                            reader.onload = (function (theFile){
+                                                return function (e){
+                                                    //insertamos la imagen
+                                                    document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="',e.target.result,'"width="70%" title="', escape(theFile.name),'"/>'].join('');
+                                                };
+                                            }) (f);
+                                            reader.readAsDataURL(f);
+                                        }
+
+                                    }
+                                    document.getElementById('file').addEventListener('change',archivo, false);
+                                </script>
+                            </div>
+                            -->
+                    
+
+
+                        
+
+
+                               <!-- 
+                            Dirección <br>
+                            <div class="row">
+                                
                             </div>
 
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="">Calle</label><b>*</b>
-                                        <input type="text" name="calle" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Numero Exterior</label><b>*</b>
-                                        <input type="number" name="numero_ext" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="">Numero Inerior</label>
-                                        <input type="number" name="numero_int" class="form-control"@required(false)>
-                                    </div>
-                                </div>
+                                
                             </div>
 
                             Datos de Emergencia <br>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="parentesco">Parentesco</label><b>*</b>
-                                        <select class="form-control" name="parentesco" id="parentesco"@required(true)>
-                                            @foreach($tipoParentesco as $parentesco)
-                                                <option value="{{ $parentesco }}">{{ ucfirst($parentesco) }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label for="">Nombre Completo</label><b>*</b>
-                                        <input type="text" name="nombre" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                            
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label for="">Telefono</label><b>*</b>
-                                        <input type="number" name="telefono" class="form-control"@required(true)>
-                                    </div>
-                                </div>
-                                    
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <br><a href="/rrhh/trabajadores" class="btn btn-secondary"> Cancelar </a>
-                                        <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
-                                        <a  href="" class="btn btn-primary" style="float: right;">Agregar datos Administrativos</a>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                        -->
                         </form>
                         <script>
                             // Función para calcular la edad
@@ -298,9 +254,97 @@
                             });
                         </script>
                     </div>
-                    
-                </div>        
-            </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            Dirección <br>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Estado</label>
+                                        <input type="text" name="estado" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Ciudad</label>
+                                        <input type="text" name="ciudad" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Colonia</label>
+                                        <input type="text" name="colonia" class="form-control">
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Calle</label><b>*</b>
+                                        <input type="text" name="calle" class="form-control"@required(true)>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="">Numero Exterior</label><b>*</b>
+                                        <input type="number" name="numero_ext" class="form-control"@required(true)>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="">Numero Inerior</label>
+                                        <input type="number" name="numero_int" class="form-control"@required(false)>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            Datos de Emergencia <br>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="parentesco">Parentesco</label><b>*</b>
+                                        <select class="form-control" name="parentesco" id="parentesco"@required(true)>
+                                            @foreach($tipoParentesco as $parentesco)
+                                                <option value="{{ $parentesco }}">{{ ucfirst($parentesco) }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="">Nombre Completo</label><b>*</b>
+                                        <input type="text" name="nombre" class="form-control"@required(true)>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="">Telefono</label><b>*</b>
+                                        <input type="number" name="telefono" class="form-control"@required(true)>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <br><a href="/rrhh/listtrabajadores" class="btn btn-secondary"> Cancelar </a>
+                                        <button type="submit" class="btn btn-primary">Guardar Trabajador</button>
+                                        <a  href="" class="btn btn-primary" style="float: right;">Agregar datos Administrativos</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>        
         </div>
     </div>
 </div>

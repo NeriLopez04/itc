@@ -19,7 +19,8 @@
                 <form action="{{ url('/trabajadores') }}" method="post" enctype="multipart/form-data">
                 @csrf
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
+                            Datos Personales <br>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -40,7 +41,7 @@
                                         <input type="text" id="age" name="edad" class="form-control"@readonly(true)>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-md-1.5">
                                     <div class="form-group">
                                         <label for="genero">Sexo</label><b>*</b>
@@ -50,11 +51,43 @@
                                                 <option value="{{ $genero }}">{{ ucfirst($genero) }}</option>
                                             @endforeach
                                         </select>
-    
+
                                         <!--<input type="submit" class="form-control"> -->
                                     </div>
                                 </div>
-    
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="file">Foto</label>
+                                        <input type="file" name="foto" id="file" class="form-control">
+                                        <center><output id="list"></output></center>
+                                        <script>
+                                            function archivo(evt){
+                                                var files = evt.target.files;
+                                                //obtenemos la imagen del campo "file".
+                                                for (var i=0, f; f = files[i]; i++){
+                                                    //solo admitimos imagenes.
+                                                    if (!f.type.match('image.*')){
+                                                        continue;
+                                                    }
+                                                    var reader = new FileReader();
+                                                    reader.onload = (function (theFile){
+                                                        return function (e){
+                                                            //insertamos la imagen
+                                                            document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="',e.target.result,'"width="70%" title="', escape(theFile.name),'"/>'].join('');
+                                                        };
+                                                    }) (f);
+                                                    reader.readAsDataURL(f);
+                                                }
+
+                                            }
+                                            document.getElementById('file').addEventListener('change',archivo, false);
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="">Numero de Seguro Social</label><b>*</b>
@@ -73,6 +106,10 @@
                                         <input type="text" name="curp" class="form-control"@required(true)>
                                     </div>
                                 </div>
+                                
+                            </div>
+                            
+                            <div class="row">
 
                                 <div class="col-md-2">
                                     <div class="form-group">
@@ -114,7 +151,10 @@
                                         <input type="email" name="correo" class="form-control"@required(false)>
                                     </div>
                                 </div>
-
+                                
+                            </div>
+                            Dirección <br>
+                            <div class="row">
                                 <div class="col-md-1">
                                     <div class="form-group">
                                         <label for="">CP</label><b>*</b>
@@ -145,7 +185,9 @@
                                         <input type="text" name="colonia" class="form-control">
                                     </div>
                                 </div>
+                            </div>
 
+                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="">Calle</label><b>*</b>
@@ -164,7 +206,10 @@
                                         <input type="number" name="numero_int" class="form-control"@required(false)>
                                     </div>
                                 </div>
+                            </div>
 
+                            Datos de Emergencia <br>
+                            <div class="row">
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="parentesco">Parentesco</label><b>*</b>
@@ -188,50 +233,8 @@
                                         <input type="number" name="telefono" class="form-control"@required(true)>
                                     </div>
                                 </div>
-
+                                    
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="file">Foto</label>
-                                <input type="file" name="foto" id="file" class="form-control">
-                                <center><output id="list"></output></center>
-                                <script>
-                                    function archivo(evt){
-                                        var files = evt.target.files;
-                                        //obtenemos la imagen del campo "file".
-                                        for (var i=0, f; f = files[i]; i++){
-                                            //solo admitimos imagenes.
-                                            if (!f.type.match('image.*')){
-                                                continue;
-                                            }
-                                            var reader = new FileReader();
-                                            reader.onload = (function (theFile){
-                                                return function (e){
-                                                    //insertamos la imagen
-                                                    document.getElementById("list").innerHTML = ['<img class="thumb thumbnail" src="',e.target.result,'"width="70%" title="', escape(theFile.name),'"/>'].join('');
-                                                };
-                                            }) (f);
-                                            reader.readAsDataURL(f);
-                                        }
-
-                                    }
-                                    document.getElementById('file').addEventListener('change',archivo, false);
-                                </script>
-                            </div>
-                        </div>
-                               <!-- 
-                            Dirección <br>
-                            <div class="row">
-                                
-                            </div>
-
-                            <div class="row">
-                                
-                            </div>
-
-                            Datos de Emergencia <br>
-                        -->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -242,7 +245,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </form>
                         <script>
                             // Función para calcular la edad

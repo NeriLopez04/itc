@@ -19,6 +19,8 @@
                 <form action="{{ url('/trabajadores') }}" method="post" enctype="multipart/form-data">
                 @csrf
                     <div class="row">
+
+
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-4">
@@ -191,6 +193,7 @@
 
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="file">Foto</label>

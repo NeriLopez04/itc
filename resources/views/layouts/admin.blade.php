@@ -553,7 +553,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Better, Different and In Time
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2024 <a href="https://www.intimecontrol.com/">In Time Control SA. de CV</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; 2025 <a href="https://www.intimecontrol.com/">In Time Control SA. de CV</a>.</strong> Todos los derechos reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
