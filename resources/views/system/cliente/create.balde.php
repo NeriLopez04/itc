@@ -18,7 +18,7 @@
 
             </div>
             <div class="card-body" style="">
-                <form action="{{ ('/prm/createcompania') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ ('/system/cliente') }}" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-12">
                             @csrf
@@ -167,14 +167,14 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <br><a href="/prm/compania" class="btn btn-secondary"> Cancelar </a>
+                                        <br><a href="/system/cliente" class="btn btn-secondary"> Cancelar </a>
                                         <button type="submit" class="btn btn-primary"> Guardar Registro </button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                </div>        
+                </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,8 @@
             <div class="card-body" style="">
                 <form action="{{ ('#') }}" method="post" enctype="multipart/form-data">
                 <div class="row-md-12">
+                    <!-- No hay logica para agregar este campo y puede ser peligroso poner un 
+                        ID directo de la base de datos visible -->
                     <div class="col-md-2"  style="float:left;">
                         <div class="form-group" >
                             <label for="">ID Proyecto</label><b>*</b><br>
@@ -39,12 +41,28 @@
                                 <input class="form-control" id="nombre_proy" type="text" name="nombre_proy" @required(true)>
                             </div>
                         </div>
+                       <!-- Se sustituye por un campo tipo SELECT
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nombre del Cliente</label><b>*</b>
                                 <input type="text" name="" class="form-control"@required(true)>
                             </div>
+                        </div> -->
+
+                        <!-- Campo SELECT correspodientes a los CLIENTES dados de alta -->
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="moneda_id">Nombre del Cliente</label><b>*</b>
+                                <select name="cliente_id" id="cliente_id" class="form-control" required>
+                                    <option value="">Seleccione el Cliente</option>
+                                    <!--@foreach($monedas as $moneda)
+                                        <option value="{{ $moneda->id }}">{{ $moneda->coin }}</option>
+                                    @endforeach-->
+                                </select>
+                            </div>
                         </div>
+
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Categoria de Trabajo</label><b>*</b>
